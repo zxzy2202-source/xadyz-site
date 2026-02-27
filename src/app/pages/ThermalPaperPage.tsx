@@ -1,0 +1,381 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router';
+import { SEO } from '@/app/components/SEO';
+import { PageHero } from '@/app/components/hero/PageHero';
+import { PLACEHOLDERS } from '@/app/lib/assets';
+import type { PageAssetsConfig } from '@/app/lib/assets';
+import { ArrowRight, CheckCircle2, Factory, Clock, Shield, Globe, Package, Printer, Box, Store, Coffee, Briefcase } from 'lucide-react';
+import { PageShell } from '@/app/components/PageShell';
+import { ProductPageCta } from '@/app/components/landing';
+import { getContactInquiryUrl } from '@/app/lib/leadConfig';
+import { ImagePlaceholder } from '@/app/components/ImagePlaceholder';
+import { content } from './ThermalPaperPage.content';
+
+export const pageAssets: PageAssetsConfig = {
+  seoImage: { src: PLACEHOLDERS.hero.factoryLine, alt: "Thermal paper rolls production line" },
+  hero: {
+    src: PLACEHOLDERS.hero.factoryLine,
+    alt: "Thermal paper slitting and rewinding production line",
+    overlay: "dark",
+    focal: "left",
+  },
+  gallery: [
+    { src: PLACEHOLDERS.product.thermalRolls, alt: "Thermal paper rolls for POS and retail" },
+    { src: PLACEHOLDERS.proof.slittingMachine, alt: "Slitting machine for thermal paper" },
+    { src: PLACEHOLDERS.proof.containerLoading, alt: "Container loading for thermal paper shipment" },
+  ],
+  cards: {},
+  proofs: [],
+};
+
+const getIcon = (iconName: string) => {
+  const icons: Record<string, React.ReactNode> = {
+    factory: <Factory size={32} className="text-blue-600" />,
+    clock: <Clock size={32} className="text-blue-600" />,
+    shield: <Shield size={32} className="text-blue-600" />,
+    globe: <Globe size={32} className="text-blue-600" />,
+    box: <Box size={28} className="text-blue-600" />,
+    printer: <Printer size={28} className="text-blue-600" />,
+    package: <Package size={28} className="text-blue-600" />,
+    store: <Store size={24} className="text-blue-600" />,
+    coffee: <Coffee size={24} className="text-blue-600" />,
+    briefcase: <Briefcase size={24} className="text-blue-600" />
+  };
+  return icons[iconName] || <Package size={32} className="text-blue-600" />;
+};
+
+interface ThermalPaperPageProps {
+  lang?: 'en' | 'ru' | 'zh';
+  type?: string;
+}
+
+export const ThermalPaperPage: React.FC<ThermalPaperPageProps> = ({ lang = 'en', type }) => {
+  const t = content[lang];
+
+  const isPrintedVariant = type === 'printed';
+  const printedTypeConfig = t.productTypes.types.find((p) => p.id === 'printed');
+  const heroTitle = isPrintedVariant && printedTypeConfig ? printedTypeConfig.title : t.hero.h1;
+
+  const baseSeo = t.seo;
+  const seo =
+    lang === 'en'
+      ? (() => {
+          switch (type) {
+            case 'printed':
+              return {
+                ...baseSeo,
+                title: 'Printed Thermal Paper Rolls with Logo & Advertising | Zhixin',
+                description:
+                  'Custom printed thermal paper rolls with logos, coupons and campaign messaging for retail chains and projects. Factory-produced rolls with stable coating and supply.',
+                keywords:
+                  baseSeo.keywords +
+                  ', printed thermal rolls, logo printed receipt paper, advertising thermal paper',
+              };
+            case 'blank':
+              return {
+                ...baseSeo,
+                title: 'Blank Thermal Paper Rolls for POS & ATM Receipt Printing | Zhixin',
+                description:
+                  'Blank thermal paper rolls for POS and ATM receipt printing, compatible with common printers and suitable for long-term contract supply.',
+              };
+            default:
+              return baseSeo;
+          }
+        })()
+      : baseSeo;
+
+  const heroContent = (
+    <PageHero
+      title={heroTitle}
+      description={t.hero.subheading ? `${t.hero.subheading} ${t.hero.intro}` : t.hero.intro}
+      image={{ src: pageAssets.hero.src, alt: pageAssets.hero.alt }}
+      overlay={pageAssets.hero.overlay}
+      placeholderKey="thermal_paper_hero"
+    />
+  );
+
+  const productJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Thermal Paper Rolls',
+    description: content.en.seo.description,
+    brand: { '@type': 'Brand', name: 'Zhixin Paper' },
+    manufacturer: {
+      '@type': 'Organization',
+      name: 'Zhixin Paper',
+      url: 'https://www.xadyz.com',
+    },
+    category: 'Thermal Paper / POS Rolls',
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      seller: { '@type': 'Organization', name: 'Zhixin Paper' },
+    },
+  };
+
+  return (
+    <>
+      <SEO 
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        lang={lang}
+      />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(productJsonLd)}</script>
+      </Helmet>
+      
+      <PageShell lang={lang} hero={heroContent}>
+        {/* 02: Overview */}
+        <section className="mb-24">
+          <p className="text-lg text-gray-700 mb-10 max-w-4xl">
+            {t.overview.paragraph}
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {t.overview.features.map((feature, idx) => (
+              <div key={idx} className="flex items-start gap-3">
+                <CheckCircle2 size={24} className="text-green-600 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-gray-800 font-medium">
+                    {feature.title}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 03: Product Types (3 Cards - Frozen) */}
+        <section className="bg-gradient-to-br from-gray-50 to-white py-16 mb-24">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              {t.productTypes.sectionTitle}
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {t.productTypes.types.map((type) => (
+                <div 
+                  key={type.id}
+                  className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-400 hover:shadow-xl transition-all flex flex-col"
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    {type.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-6 text-base">
+                    {type.shortDesc}
+                  </p>
+                  
+                  <ul className="space-y-3 mb-8 flex-grow">
+                    {type.bullets.map((bullet, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <CheckCircle2 size={20} className="text-green-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <Link 
+                      to={type.ctaLink}
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 hover:scale-105 transition-all"
+                    >
+                      {type.cta}
+                      <ArrowRight size={20} />
+                    </Link>
+                    <Link 
+                      to={getContactInquiryUrl(lang, 'thermal_paper_rolls')}
+                      className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all"
+                    >
+                      {lang === 'zh' ? '快速询价' : lang === 'ru' ? 'Быстрый запрос' : 'Quick Quote'}
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 04b: Packaging & Shipping Gallery */}
+        <section className="max-w-7xl mx-auto px-4 mb-24">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            {lang === 'ru'
+              ? 'Упаковка и отгрузка термобумаги'
+              : lang === 'zh'
+              ? '热敏纸卷的内包装、纸箱与托盘装柜'
+              : 'Thermal Paper Rolls Packaging & Shipping'}
+          </h2>
+          <p className="text-gray-700 mb-8 max-w-3xl">
+            {lang === 'ru'
+              ? 'Показываем типичные варианты упаковки: внутренняя упаковка рулонов, коробки, паллеты и загрузка контейнера — для оценки логистики и безопасности поставок.'
+              : lang === 'zh'
+              ? '展示热敏纸卷常见的内包装、外箱、托盘打托以及装柜方式，方便你评估装载效率和到货安全性。'
+              : 'Typical packaging solutions for thermal paper rolls, from inner wrapping to cartons, pallets and container loading, so you can evaluate logistics efficiency and cargo safety.'}
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <ImagePlaceholder
+              type="product"
+              aspectRatio="4:3"
+              size="lg"
+              description={
+                lang === 'ru'
+                  ? 'Внутренняя упаковка рулонов (термоусадка / пленка)'
+                  : lang === 'zh'
+                  ? '单卷或多卷热缩膜/包膜内包装'
+                  : 'Inner packing: single or multi rolls with shrink film / wrap'
+              }
+              placeholderKey="thermal_paper_packaging_inner"
+            />
+            <ImagePlaceholder
+              type="product"
+              aspectRatio="4:3"
+              size="lg"
+              description={
+                lang === 'ru'
+                  ? 'Картонные коробки с защитой углов и маркировкой'
+                  : lang === 'zh'
+                  ? '纸箱包装，带角保护和清晰标签'
+                  : 'Carton boxes with corner protection and clear labeling'
+              }
+              placeholderKey="thermal_paper_packaging_carton"
+            />
+            <ImagePlaceholder
+              type="material"
+              aspectRatio="4:3"
+              size="lg"
+              description={
+                lang === 'ru'
+                  ? 'Паллеты с обмоткой стретч-пленкой'
+                  : lang === 'zh'
+                  ? '托盘打托，并用缠绕膜固定'
+                  : 'Palletized loads wrapped with stretch film'
+              }
+              placeholderKey="thermal_paper_packaging_pallet"
+            />
+            <ImagePlaceholder
+              type="factory"
+              aspectRatio="4:3"
+              size="lg"
+              description={
+                lang === 'ru'
+                  ? 'Загрузка паллет в контейнер для экспортных поставок'
+                  : lang === 'zh'
+                  ? '装柜现场，托盘装载进入集装箱'
+                  : 'Container loading of pallets for export shipments'
+              }
+              placeholderKey="thermal_paper_packaging_container"
+            />
+          </div>
+        </section>
+
+        {/* 04: Manufacturing & Capacity */}
+        <section className="max-w-7xl mx-auto px-4 mb-24">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+            {t.manufacturing.sectionTitle}
+          </h2>
+          <p className="text-lg text-gray-700 mb-12 max-w-4xl mx-auto text-center">
+            {t.manufacturing.intro}
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {t.manufacturing.items.map((item, idx) => (
+              <div 
+                key={idx}
+                className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition-all"
+              >
+                <div className="flex justify-center mb-4">
+                  {getIcon(item.icon)}
+                </div>
+                <div className="text-base text-gray-700 font-medium">
+                  {item.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 05: Applications (4 Cards - Frozen) */}
+        <section className="bg-gradient-to-br from-blue-50 to-white py-16 mb-24">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              {t.applications.sectionTitle}
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {t.applications.items.map((item, idx) => (
+                <Link
+                  key={idx}
+                  to={item.link}
+                  className="bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg transition-all group"
+                >
+                  <div className="flex justify-center mb-4">
+                    {getIcon(item.icon)}
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2 text-lg text-center group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 06: Customization & OEM */}
+        <section className="max-w-7xl mx-auto px-4 mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {t.customization.sectionTitle}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {t.customization.intro}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {t.customization.options.map((option, idx) => (
+              <div 
+                key={idx}
+                className="bg-white border-2 border-gray-200 rounded-2xl p-8 text-center hover:border-blue-400 hover:shadow-xl transition-all"
+              >
+                <div className="flex justify-center mb-4">
+                  {getIcon(option.icon)}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">
+                  {option.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 07: Quality & Compliance */}
+        <section className="bg-gradient-to-br from-gray-50 to-white py-16 mb-24">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              {t.quality.sectionTitle}
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {t.quality.items.map((item, idx) => (
+                <div 
+                  key={idx}
+                  className="bg-white border border-gray-200 rounded-xl p-6 text-center"
+                >
+                  <h3 className="font-bold text-gray-900 text-lg">
+                    {item.title}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 08: CTA Block */}
+        <ProductPageCta lang={lang} />
+      </PageShell>
+    </>
+  );
+};

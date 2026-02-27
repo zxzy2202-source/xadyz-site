@@ -1,0 +1,209 @@
+/**
+ * PageHero - 统一 Hero 组件样式
+ * 全站所有页面 Hero 区使用此样式，确保字体、字号、行高、间距一致
+ */
+
+/* 基础容器 */
+.pageHero {
+  position: relative;
+  width: 100%;
+  height: clamp(560px, 92vh, 760px);
+  overflow: hidden;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+/* 紧凑版（用于 contact / tools / faqs / blog list 等轻页面） */
+.pageHero--compact {
+  height: clamp(360px, 52vh, 520px);
+}
+
+/* 背景 */
+.pageHero__bg {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.02);
+}
+
+/* overlay：保证文字可读 */
+.pageHero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.26) 55%, rgba(0, 0, 0, 0.08) 100%);
+}
+
+.pageHero--light .pageHero__overlay {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.14) 55%, rgba(0, 0, 0, 0.06) 100%);
+}
+
+/* 内容容器 */
+.pageHero__inner {
+  position: relative;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  text-align: left;
+  align-items: flex-start;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.pageHero--center .pageHero__inner {
+  text-align: center;
+  align-items: center;
+}
+
+/* Eyebrow */
+.pageHero__eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+/* Title */
+.pageHero__title {
+  font-size: clamp(38px, 4.4vw, 56px);
+  line-height: 1.15;
+  font-weight: 650;
+  color: #fff;
+  max-width: 14ch;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.pageHero--center .pageHero__title {
+  max-width: 20ch;
+}
+
+/* Desc */
+.pageHero__desc {
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 46ch;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.pageHero--center .pageHero__desc {
+  max-width: 60ch;
+}
+
+/* CTA */
+.pageHero__cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.pageHero__cta-primary,
+.pageHero__cta-secondary {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageHero__cta-primary {
+  background-color: #2563eb;
+  color: #fff;
+  border: 2px solid #2563eb;
+}
+
+.pageHero__cta-primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.pageHero__cta-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.pageHero__cta-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+/* 响应式 */
+@media (max-width: 1023px) {
+  .pageHero {
+    height: clamp(480px, 80vh, 620px);
+  }
+
+  .pageHero__inner {
+    padding: 60px 20px 24px;
+  }
+
+  .pageHero__title {
+    max-width: 16ch;
+  }
+
+  .pageHero--center .pageHero__title {
+    max-width: 22ch;
+  }
+}
+
+@media (max-width: 767px) {
+  .pageHero {
+    height: clamp(560px, 92vh, 720px);
+    border-radius: 0;
+  }
+
+  .pageHero--compact {
+    height: clamp(360px, 52vh, 480px);
+  }
+
+  .pageHero__inner {
+    padding: 56px 18px 20px;
+  }
+
+  .pageHero__title {
+    font-size: 34px;
+    line-height: 1.18;
+    max-width: 18ch;
+  }
+
+  .pageHero--center .pageHero__title {
+    max-width: 100%;
+  }
+
+  .pageHero__desc {
+    font-size: 16px;
+    max-width: 52ch;
+  }
+
+  .pageHero--center .pageHero__desc {
+    max-width: 100%;
+  }
+
+  .pageHero__cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pageHero__cta-primary,
+  .pageHero__cta-secondary {
+    width: 100%;
+  }
+}

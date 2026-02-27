@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f2347;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Accent line -->
+  <rect x="0" y="0" width="6" height="630" fill="#2d7a8a" />
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="590" width="1200" height="40" fill="#0a1628" opacity="0.6" />
+
+  <!-- Logo triangle shapes (right side, large decorative) -->
+  <!-- Teal triangle (left/bottom) -->
+  <polygon points="750,200 830,340 670,340" fill="none" stroke="#2d7a8a" stroke-width="28" stroke-linejoin="round" opacity="0.9" />
+  <!-- Gold triangle (right/top) -->
+  <polygon points="830,160 910,300 750,300" fill="none" stroke="#b8914a" stroke-width="28" stroke-linejoin="round" opacity="0.9" />
+  <!-- Magenta triangle (bottom center) -->
+  <polygon points="790,240 870,380 710,380" fill="none" stroke="#d4247a" stroke-width="28" stroke-linejoin="round" opacity="0.85" />
+
+  <!-- Company name -->
+  <text x="80" y="220" font-family="Arial, sans-serif" font-size="78" font-weight="bold" fill="#ffffff" letter-spacing="2">Zhixin Paper</text>
+
+  <!-- Tagline -->
+  <text x="84" y="295" font-family="Arial, sans-serif" font-size="32" fill="#5abfce" letter-spacing="1">Thermal Paper � Labels � NCR Forms</text>
+
+  <!-- Divider line -->
+  <line x1="80" y1="335" x2="560" y2="335" stroke="#2d7a8a" stroke-width="2" opacity="0.6" />
+
+  <!-- Sub text -->
+  <text x="84" y="380" font-family="Arial, sans-serif" font-size="26" fill="#8fa8c0">B2B Manufacturer � Factory Direct � Global Export</text>
+
+  <!-- Tags -->
+  <rect x="84" y="420" width="180" height="44" rx="22" fill="#2d7a8a" opacity="0.3" />
+  <text x="174" y="448" font-family="Arial, sans-serif" font-size="20" fill="#5abfce" text-anchor="middle">ISO Certified</text>
+
+  <rect x="278" y="420" width="200" height="44" rx="22" fill="#b8914a" opacity="0.25" />
+  <text x="378" y="448" font-family="Arial, sans-serif" font-size="20" fill="#d4b06a" text-anchor="middle">20+ Years Exp.</text>
+
+  <rect x="492" y="420" width="200" height="44" rx="22" fill="#d4247a" opacity="0.2" />
+  <text x="592" y="448" font-family="Arial, sans-serif" font-size="20" fill="#e06090" text-anchor="middle">50+ Countries</text>
+
+  <!-- Website URL -->
+  <text x="84" y="570" font-family="Arial, sans-serif" font-size="24" fill="#5a7a9a" letter-spacing="1">www.xadyz.com</text>
+</svg>
