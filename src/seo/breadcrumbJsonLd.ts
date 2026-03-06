@@ -20,6 +20,13 @@ function baseUrl(lang: Lang): string {
 }
 
 /**
+ * Get homepage URL (with trailing slash for sitemap consistency)
+ */
+function homeUrl(lang: Lang): string {
+  return `${SITE}/${lang}/`;
+}
+
+/**
  * Match result containing segment and its key
  */
 type MatchStep = {
@@ -107,7 +114,7 @@ export function buildBreadcrumbJsonLd(pathname: string): object | null {
       "@type": "ListItem",
       position: 1,
       name: translations.home,
-      item: baseUrl(lang),
+      item: homeUrl(lang),
     },
   ];
 

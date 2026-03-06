@@ -6,8 +6,8 @@ import { SEO } from '@/app/components/SEO';
 import { PageHero } from '@/app/components/hero/PageHero';
 import { PLACEHOLDERS } from '@/app/lib/assets';
 import type { PageAssetsConfig } from '@/app/lib/assets';
-import { ArrowRight, CheckCircle2, Package, Factory, Shield } from 'lucide-react';
-import { PageShell } from '@/app/components/PageShell';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { getIcon } from '@/app/lib/iconMap';
 import { ProductPageCta } from '@/app/components/landing';
 import { Breadcrumb } from '@/app/components/Breadcrumb';
 import { content } from './MaterialSupplyOverviewPage.content';
@@ -106,7 +106,7 @@ export const MaterialSupplyOverviewPage: React.FC<MaterialSupplyOverviewPageProp
             {t.supplyModel.features.map((feature, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition-all">
                 <div className="flex justify-center mb-4">
-                  <Package size={32} className="text-blue-600" />
+                  {getIcon(feature.icon ?? 'package', 32)}
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg">{feature.title}</h3>
               </div>
@@ -123,14 +123,14 @@ export const MaterialSupplyOverviewPage: React.FC<MaterialSupplyOverviewPageProp
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {t.qualityAssurance.features.map((feature, idx) => (
-                <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 text-center">
-                  <div className="flex justify-center mb-4">
-                    <Shield size={32} className="text-blue-600" />
-                  </div>
-                  <h3 className="font-bold text-gray-900 text-lg">{feature.title}</h3>
+            {t.qualityAssurance.features.map((feature, idx) => (
+              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 text-center">
+                <div className="flex justify-center mb-4">
+                  {getIcon(feature.icon ?? 'shield', 32)}
                 </div>
-              ))}
+                <h3 className="font-bold text-gray-900 text-lg">{feature.title}</h3>
+              </div>
+            ))}
             </div>
           </div>
         </section>
@@ -145,7 +145,7 @@ export const MaterialSupplyOverviewPage: React.FC<MaterialSupplyOverviewPageProp
             {t.applicationsTeaser.items.map((item, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:border-blue-300 hover:shadow-lg transition-all">
                 <div className="flex justify-center mb-4">
-                  <Factory size={28} className="text-blue-600" />
+                  {getIcon(item.icon ?? 'factory', 28)}
                 </div>
                 <h3 className="font-bold text-gray-900">{item.title}</h3>
               </div>

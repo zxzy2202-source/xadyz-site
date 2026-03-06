@@ -248,6 +248,11 @@ const pathTranslations: Record<string, Record<string, string>> = {
     ru: 'OEM и кастомизация',
     zh: 'OEM定制'
   },
+  'factory-journal': {
+    en: 'Factory Journal',
+    ru: 'Заводской журнал',
+    zh: '工厂日志'
+  },
   'packaging-shipping': {
     en: 'Packaging & Shipping',
     ru: 'Упаковка и отгрузка',

@@ -42,6 +42,7 @@ const hoverTexts = {
     supermarkets: 'Price tags, labels, and receipt paper for supermarkets.',
     bankingFinance: 'ATM receipts, bank slips, and financial documentation.',
     governmentTenders: 'Forms and documentation for government projects.',
+    requestTenderPack: 'Request our tender documentation pack for government bids and projects.',
     healthcare: 'Medical labels and documentation solutions.',
     
     // Manufacturing submenu
@@ -60,7 +61,12 @@ const hoverTexts = {
     faqs: 'Common purchasing and project questions.',
     
     // Contact submenu
-    contactUs: 'General inquiries and quotations.'
+    contactUs: 'General inquiries and quotations.',
+    about: 'Company profile, history, and team.',
+    // Mobile menu
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
+    logoSubtitle: 'Thermal solutions since 2009',
   },
   
   ru: {
@@ -99,6 +105,7 @@ const hoverTexts = {
     supermarkets: 'Ценники, этикетки и чековая бумага для супермаркетов.',
     bankingFinance: 'Чеки банкоматов, банковские квитанции и финансовые документы.',
     governmentTenders: 'Формы и документация для государственных проектов.',
+    requestTenderPack: 'Запросите тендерный пакет документации для государственных закупок и проектов.',
     healthcare: 'Медицинские этикетки и документация.',
     
     // Manufacturing submenu
@@ -117,7 +124,12 @@ const hoverTexts = {
     faqs: 'Частые вопросы по закупкам.',
     
     // Contact submenu
-    contactUs: 'Запросы и коммерческие предложения.'
+    contactUs: 'Запросы и коммерческие предложения.',
+    about: 'О компании, истории и команде.',
+    // Mobile menu
+    openMenu: 'Открыть меню',
+    closeMenu: 'Закрыть меню',
+    logoSubtitle: 'Термальные решения с 2009 года',
   },
   
   zh: {
@@ -156,6 +168,7 @@ const hoverTexts = {
     supermarkets: '超市的价格标签、标签和收据纸。',
     bankingFinance: 'ATM收据、银行凭条和金融文档。',
     governmentTenders: '政府项目的表格和文档。',
+    requestTenderPack: '申请政府投标与项目所需的投标资料包。',
     healthcare: '医疗标签和文档解决方案。',
     
     // Manufacturing submenu
@@ -174,7 +187,12 @@ const hoverTexts = {
     faqs: '常见采购和项目问题。',
     
     // Contact submenu
-    contactUs: '一般咨询和报价。'
+    contactUs: '一般咨询和报价。',
+    about: '公司简介、发展历程与团队。',
+    // Mobile menu
+    openMenu: '打开菜单',
+    closeMenu: '关闭菜单',
+    logoSubtitle: '热敏纸解决方案，始于2009',
   }
 };
 
@@ -269,9 +287,8 @@ export const Header = () => {
         { name: '物流与仓储', path: '/zh/applications/logistics-warehousing', hoverKey: 'logisticsWarehousing' },
         { name: '超市', path: '/zh/applications/supermarkets', hoverKey: 'supermarkets' },
         { name: '银行与金融', path: '/zh/applications/banking-finance', hoverKey: 'bankingFinance' },
-        { name: '政府投标', path: '/zh/applications/government-tenders', hoverKey: 'governmentTenders' },
         { name: '医疗健康', path: '/zh/applications/healthcare', hoverKey: 'healthcare' },
-        { name: '申请投标资料包', path: '/zh/applications/request-tender-pack', hoverKey: 'retailPos' },
+        { name: '申请投标资料包', path: '/zh/applications/request-tender-pack', hoverKey: 'requestTenderPack' },
       ]
     },
     {
@@ -298,7 +315,7 @@ export const Header = () => {
         { name: '常见问题', path: '/zh/resources/faqs', hoverKey: 'faqs' },
       ]
     },
-    { name: '关于我们', path: '/zh/about', hoverKey: 'contact' },
+    { name: '关于我们', path: '/zh/about', hoverKey: 'about' },
     {
       name: '联系我们',
       path: '/zh/contact',
@@ -378,7 +395,7 @@ export const Header = () => {
         { name: 'Банковский сектор', path: '/ru/applications/banking-finance', hoverKey: 'bankingFinance' },
         { name: 'Государственные тендеры', path: '/ru/applications/government-tenders', hoverKey: 'governmentTenders' },
         { name: 'Здравоохранение', path: '/ru/applications/healthcare', hoverKey: 'healthcare' },
-        { name: 'Запросить тендерный пакет', path: '/ru/applications/request-tender-pack', hoverKey: 'retailPos' },
+        { name: 'Запросить тендерный пакет', path: '/ru/applications/request-tender-pack', hoverKey: 'requestTenderPack' },
       ]
     },
     {
@@ -405,7 +422,7 @@ export const Header = () => {
         { name: 'Вопросы и ответы', path: '/ru/resources/faqs', hoverKey: 'faqs' },
       ]
     },
-    { name: 'О компании', path: '/ru/about', hoverKey: 'contact' },
+    { name: 'О компании', path: '/ru/about', hoverKey: 'about' },
     {
       name: 'Контакты',
       path: '/ru/contact',
@@ -485,7 +502,7 @@ export const Header = () => {
         { name: 'Banking & Finance', path: '/en/applications/banking-finance', hoverKey: 'bankingFinance' },
         { name: 'Government & Tenders', path: '/en/applications/government-tenders', hoverKey: 'governmentTenders' },
         { name: 'Healthcare', path: '/en/applications/healthcare', hoverKey: 'healthcare' },
-        { name: 'Request Tender Pack', path: '/en/applications/request-tender-pack', hoverKey: 'retailPos' },
+        { name: 'Request Tender Pack', path: '/en/applications/request-tender-pack', hoverKey: 'requestTenderPack' },
       ]
     },
     {
@@ -512,7 +529,7 @@ export const Header = () => {
         { name: 'FAQs', path: '/en/resources/faqs', hoverKey: 'faqs' },
       ]
     },
-    { name: 'About', path: '/en/about', hoverKey: 'contact' },
+    { name: 'About', path: '/en/about', hoverKey: 'about' },
     {
       name: 'Contact',
       path: '/en/contact',
@@ -573,7 +590,7 @@ export const Header = () => {
               Zhixin<span className="text-blue-600 group-hover:text-gray-900">Paper</span>
             </span>
             <span className="text-[10px] font-bold text-gray-400 tracking-[0.15em] uppercase mt-1.5 leading-none">
-              Thermal solutions since 2009
+              {t.logoSubtitle}
             </span>
           </Link>
           
@@ -659,7 +676,7 @@ export const Header = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="xl:hidden p-2 text-gray-600 hover:text-blue-600"
-            aria-label="Toggle menu"
+            aria-label={isOpen ? t.closeMenu : t.openMenu}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

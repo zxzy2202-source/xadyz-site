@@ -48,8 +48,9 @@ export function PackagingLogisticsPage({ lang }: PackagingLogisticsPageProps) {
   return (
     <>
       <SEO
-        title={`${t.hero.title} | Zhixin Paper - B2B Thermal Paper Supplier`}
+        title={`${t.hero.title} | ${t.seo.titleSuffix}`}
         description={t.hero.description}
+        keywords={t.seo.keywords}
         lang={lang}
       />
       <div className="min-h-screen flex flex-col bg-white">

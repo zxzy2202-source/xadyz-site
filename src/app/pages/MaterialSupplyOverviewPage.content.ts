@@ -16,6 +16,7 @@ export interface MaterialCategory {
 export interface FeatureItem {
   title: string;
   desc: string;
+  icon?: string;
 }
 
 export interface MaterialSupplyContent {
@@ -54,27 +55,27 @@ export const content: Record<Lang, MaterialSupplyContent> = {
       sectionTitle: 'Supply Model & Partnership',
       intro: 'We focus on long-term material supply rather than one-off trading. Our supply model supports stable planning, consistent quality, and project-based purchasing requirements.',
       features: [
-        { title: 'Long-term cooperation', desc: '' },
-        { title: 'Batch consistency', desc: '' },
-        { title: 'Contract-based supply', desc: '' },
+        { title: 'Long-term cooperation', desc: '', icon: 'clock' },
+        { title: 'Batch consistency', desc: '', icon: 'shield' },
+        { title: 'Contract-based supply', desc: '', icon: 'file' },
       ],
     },
     qualityAssurance: {
       sectionTitle: 'Quality & Sourcing Assurance',
       intro: 'Materials are sourced from qualified partner mills and inspected before delivery to ensure consistent performance for converting and industrial use.',
       features: [
-        { title: 'Qualified sourcing', desc: '' },
-        { title: 'Incoming inspection', desc: '' },
-        { title: 'Batch traceability', desc: '' },
+        { title: 'Qualified sourcing', desc: '', icon: 'award' },
+        { title: 'Incoming inspection', desc: '', icon: 'shield' },
+        { title: 'Batch traceability', desc: '', icon: 'truck' },
       ],
     },
     applicationsTeaser: {
       sectionTitle: 'Applications & Target Customers',
       items: [
-        { title: 'Paper converters', desc: '' },
-        { title: 'Label printers', desc: '' },
-        { title: 'Distributors', desc: '' },
-        { title: 'Project-based procurement', desc: '' },
+        { title: 'Paper converters', desc: '', icon: 'printer' },
+        { title: 'Label printers', desc: '', icon: 'barcode' },
+        { title: 'Distributors', desc: '', icon: 'truck' },
+        { title: 'Project-based procurement', desc: '', icon: 'briefcase' },
       ],
     },
     ctaBlock: {
@@ -110,27 +111,27 @@ export const content: Record<Lang, MaterialSupplyContent> = {
       sectionTitle: 'Модель поставок и партнерство',
       intro: 'Мы ориентируемся на долгосрочное сотрудничество, а не разовые сделки. Модель поставок обеспечивает стабильное планирование и одинаковое качество партий.',
       features: [
-        { title: 'Долгосрочное сотрудничество', desc: '' },
-        { title: 'Стабильность партий', desc: '' },
-        { title: 'Контрактные поставки', desc: '' },
+        { title: 'Долгосрочное сотрудничество', desc: '', icon: 'clock' },
+        { title: 'Стабильность партий', desc: '', icon: 'shield' },
+        { title: 'Контрактные поставки', desc: '', icon: 'file' },
       ],
     },
     qualityAssurance: {
       sectionTitle: 'Качество и гарантии поставок',
       intro: 'Материалы поставляются от проверенных фабрик и проходят входной контроль перед отгрузкой для обеспечения стабильных характеристик при переработке.',
       features: [
-        { title: 'Проверенные источники', desc: '' },
-        { title: 'Входной контроль', desc: '' },
-        { title: 'Прослеживаемость партий', desc: '' },
+        { title: 'Проверенные источники', desc: '', icon: 'award' },
+        { title: 'Входной контроль', desc: '', icon: 'shield' },
+        { title: 'Прослеживаемость партий', desc: '', icon: 'truck' },
       ],
     },
     applicationsTeaser: {
       sectionTitle: 'Применение и целевые клиенты',
       items: [
-        { title: 'Бумажные конвертеры', desc: '' },
-        { title: 'Типографии этикеток', desc: '' },
-        { title: 'Дистрибьюторы', desc: '' },
-        { title: 'Проектные закупки', desc: '' },
+        { title: 'Бумажные конвертеры', desc: '', icon: 'printer' },
+        { title: 'Типографии этикеток', desc: '', icon: 'barcode' },
+        { title: 'Дистрибьюторы', desc: '', icon: 'truck' },
+        { title: 'Проектные закупки', desc: '', icon: 'briefcase' },
       ],
     },
     ctaBlock: {
@@ -166,27 +167,27 @@ export const content: Record<Lang, MaterialSupplyContent> = {
       sectionTitle: '供应模式与合作',
       intro: '我们专注于长期材料供应而非一次性交易。我们的供应模式支持稳定规划、一致质量和基于项目的采购需求。',
       features: [
-        { title: '长期合作', desc: '' },
-        { title: '批次一致性', desc: '' },
-        { title: '基于合同的供应', desc: '' },
+        { title: '长期合作', desc: '', icon: 'clock' },
+        { title: '批次一致性', desc: '', icon: 'shield' },
+        { title: '基于合同的供应', desc: '', icon: 'file' },
       ],
     },
     qualityAssurance: {
       sectionTitle: '质量与采购保证',
       intro: '材料从合格的合作工厂采购，并在交付前进行检验，以确保分切和工业使用的一致性能。',
       features: [
-        { title: '合格采购', desc: '' },
-        { title: '进货检验', desc: '' },
-        { title: '批次可追溯性', desc: '' },
+        { title: '合格采购', desc: '', icon: 'award' },
+        { title: '进货检验', desc: '', icon: 'shield' },
+        { title: '批次可追溯性', desc: '', icon: 'truck' },
       ],
     },
     applicationsTeaser: {
       sectionTitle: '应用与目标客户',
       items: [
-        { title: '纸张分切厂', desc: '' },
-        { title: '标签印刷厂', desc: '' },
-        { title: '分销商', desc: '' },
-        { title: '项目采购', desc: '' },
+        { title: '纸张分切厂', desc: '', icon: 'printer' },
+        { title: '标签印刷厂', desc: '', icon: 'barcode' },
+        { title: '分销商', desc: '', icon: 'truck' },
+        { title: '项目采购', desc: '', icon: 'briefcase' },
       ],
     },
     ctaBlock: {

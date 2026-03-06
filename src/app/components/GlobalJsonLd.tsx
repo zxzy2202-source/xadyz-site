@@ -1,7 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { CONTACT } from '@/app/lib/contactConfig';
 
-const BASE_URL = 'https://www.xadyz.com';
+const BASE_URL = typeof import.meta !== 'undefined' && import.meta.env?.VITE_SITE_URL
+  ? String(import.meta.env.VITE_SITE_URL).replace(/\/$/, '')
+  : 'https://xadyz.com';
 
 const organizationSchema = {
   '@context': 'https://schema.org',

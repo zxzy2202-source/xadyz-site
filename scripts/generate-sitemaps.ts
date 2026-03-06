@@ -43,9 +43,12 @@ function joinPath(...parts: string[]): string {
 
 /**
  * Build full URL for a language and path
+ * Homepage (restPath empty) gets trailing slash for consistency with <loc>
  */
 function buildUrl(lang: Lang, restPath: string): string {
-  return `${SITE}/${lang}${restPath}`;
+  const base = `${SITE}/${lang}`;
+  if (!restPath || restPath === "/") return `${base}/`;
+  return `${base}${restPath.startsWith("/") ? restPath : `/${restPath}`}`;
 }
 
 /**
@@ -200,12 +203,11 @@ function main() {
     const urls: FlatRoute[] = [];
 
     // Homepage (always exists - you can make this configurable)
-    const rootPriority = lang === "zh" ? 0.8 : 1.0;
     urls.push({
       loc: `${SITE}/${lang}/`,
       restPath: "",
       changefreq: "weekly",
-      priority: rootPriority,
+      priority: 1.0,
       lastmod: LASTMOD,
     });
     stats[lang].total++;

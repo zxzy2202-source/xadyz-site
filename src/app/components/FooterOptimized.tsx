@@ -167,7 +167,6 @@ export const FooterOptimized = () => {
       
       solutions: '解决方案',
       solutionsMenu: [
-        { name: '政府投标', path: '/zh/applications/government-tenders', highlight: true, icon: Briefcase },
         { name: '应用概览', path: '/zh/applications', icon: Briefcase },
         { name: '申请投标资料包', path: '/zh/applications/request-tender-pack', highlight: true, icon: FileText },
       ],
@@ -415,7 +414,7 @@ export const FooterOptimized = () => {
                     to={`/${lang}/applications/request-tender-pack`}
                     className="block text-center bg-blue-600 text-white px-4 py-2.5 rounded-lg hover:bg-blue-700 transition-colors text-sm font-bold"
                   >
-                    📄 {content.solutionsMenu[2].name}
+                    <span aria-hidden="true">📄</span> {content.solutionsMenu[content.solutionsMenu.length - 1].name}
                   </Link>
                 </div>
               </div>

@@ -38,6 +38,7 @@ export interface PhotoItem {
 
 export interface PackagingLogisticsContent {
   hero: { title: string; subtitle: string; description: string };
+  seo: { titleSuffix: string; keywords: string };
   standards: { title: string; description: string; items: StandardItem[] };
   documentation: { title: string; description: string; items: DocumentItem[] };
   shipping: { title: string; description: string; items: ShippingItem[] };
@@ -52,6 +53,10 @@ export const content: Record<Lang, PackagingLogisticsContent> = {
       title: 'Packaging & Export Logistics',
       subtitle: 'Complete Guide for International Shipping',
       description: 'Comprehensive information on export packaging standards, logistics documentation, and shipping solutions for CIS markets.',
+    },
+    seo: {
+      titleSuffix: 'Zhixin Paper - B2B Thermal Paper Supplier',
+      keywords: 'export packaging standards, logistics documentation, container loading, sea freight, rail freight, CIS shipping, thermal paper export',
     },
     standards: {
       title: 'Export Packaging Standards',
@@ -113,6 +118,10 @@ export const content: Record<Lang, PackagingLogisticsContent> = {
       subtitle: 'Полное руководство по международной доставке',
       description: 'Исчерпывающая информация о стандартах экспортной упаковки, логистической документации и решениях для доставки на рынки СНГ.',
     },
+    seo: {
+      titleSuffix: 'Zhixin Paper - Поставщик термобумаги B2B',
+      keywords: 'экспортная упаковка, логистическая документация, загрузка контейнера, морские перевозки, железнодорожные перевозки, доставка в СНГ, экспорт термобумаги',
+    },
     standards: {
       title: 'Стандарты экспортной упаковки',
       description: 'Профессиональные упаковочные решения для обеспечения безопасности продукции при международной транспортировке',
@@ -172,6 +181,10 @@ export const content: Record<Lang, PackagingLogisticsContent> = {
       title: '包装与出口物流',
       subtitle: '国际运输完整指南',
       description: '关于出口包装标准、物流文档和独联体市场运输解决方案的全面信息。',
+    },
+    seo: {
+      titleSuffix: '志信纸业 - B2B热敏纸供应商',
+      keywords: '出口包装标准, 物流文档, 集装箱装载, 海运, 铁路运输, 独联体运输, 热敏纸出口',
     },
     standards: {
       title: '出口包装标准',
