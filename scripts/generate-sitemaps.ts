@@ -249,11 +249,8 @@ function main() {
       loc: `${SITE}/sitemap-${lang}.xml`,
       lastmod: LASTMOD,
     })),
-    // 博客文章 sitemap（由 apps/blog 自动生成）
-    {
-      loc: `${SITE}/blog/sitemap.xml`,
-      lastmod: LASTMOD,
-    },
+    // 博客文章 sitemap 待博客子应用部署后再启用：
+    // { loc: `${SITE}/blog/sitemap.xml`, lastmod: LASTMOD },
   ]);
   const indexPath = path.join(publicDir, "sitemap.xml");
 
