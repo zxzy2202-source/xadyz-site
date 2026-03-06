@@ -113,7 +113,27 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ lang = 'en' }) => {
           cardCta={lang === 'en' ? 'Learn more' : lang === 'ru' ? 'Подробнее' : '了解更多'}
         />
 
-        {/* 06: CTA Block */}
+        {/* 06: Material Supply Cross-link */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <p className="text-gray-400 text-sm font-semibold uppercase tracking-widest mb-2">
+                {lang === 'zh' ? '采购原材料？' : lang === 'ru' ? 'Нужны материалы?' : 'Need Raw Materials?'}
+              </p>
+              <h3 className="text-2xl font-bold text-white">
+                {lang === 'zh' ? '热敏纸 Jumbo 卷、不干胶卷材与 NCR 纸供应' : lang === 'ru' ? 'Поставка термоджамбо, самоклеящихся материалов и NCR-бумаги' : 'Thermal Jumbo Rolls, Self-Adhesive & NCR Materials Supply'}
+              </h3>
+            </div>
+            <a
+              href={`/${lang}/material-supply`}
+              className="flex-shrink-0 inline-flex items-center gap-2 bg-white text-gray-900 font-bold px-6 py-3 rounded-xl hover:bg-gray-100 transition-colors whitespace-nowrap"
+            >
+              {lang === 'zh' ? '查看材料供应 →' : lang === 'ru' ? 'Смотреть материалы →' : 'View Material Supply →'}
+            </a>
+          </div>
+        </section>
+
+        {/* 07: CTA Block */}
         <ProductPageCta lang={lang} />
       </PageShell>
     </>

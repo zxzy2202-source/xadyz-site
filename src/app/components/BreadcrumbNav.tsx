@@ -68,7 +68,7 @@ const pathTranslations: Record<string, Record<string, string>> = {
     zh: '印刷'
   },
   
-  // Specific Thermal Products
+  // Specific Thermal Products (legacy flat-URL keys, kept for redirect fallback)
   'pos-thermal-paper': {
     en: 'POS Thermal Paper',
     ru: 'POS термобумага',
@@ -98,6 +98,32 @@ const pathTranslations: Record<string, Record<string, string>> = {
     en: 'Logistics Labels',
     ru: 'Логистические этикетки',
     zh: '物流标签'
+  },
+  // New sub-path segments under thermal-paper-rolls / thermal-labels
+  pos: {
+    en: 'POS Thermal Paper',
+    ru: 'POS термобумага',
+    zh: 'POS热敏纸'
+  },
+  atm: {
+    en: 'ATM Thermal Paper',
+    ru: 'ATM термобумага',
+    zh: 'ATM热敏纸'
+  },
+  'bpa-free': {
+    en: 'BPA-Free Thermal Paper',
+    ru: 'Термобумага без BPA',
+    zh: '无BPA热敏纸'
+  },
+  '4x6': {
+    en: '4×6 Thermal Labels',
+    ru: 'Термоэтикетки 4×6',
+    zh: '4x6热敏标签'
+  },
+  a6: {
+    en: 'A6 Thermal Labels',
+    ru: 'Термоэтикетки A6',
+    zh: 'A6热敏标签'
   },
   
   // NCR Forms

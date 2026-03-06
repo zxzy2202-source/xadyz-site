@@ -83,6 +83,9 @@ export const ThermalLabelsPage: React.FC<ThermalLabelsPageProps> = ({ lang = 'en
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'USD',
+      lowPrice: '0.02',
+      highPrice: '0.15',
+      offerCount: 1,
       availability: 'https://schema.org/InStock',
       seller: { '@type': 'Organization', name: 'Zhixin Paper' },
     },

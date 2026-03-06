@@ -4,6 +4,7 @@ import { ResourcesFooter } from '@/app/components/ResourcesFooter';
 import { SEO } from '@/app/components/SEO';
 import { PageHero } from '@/app/components/hero/PageHero';
 import { ImagePlaceholder } from '@/app/components/ImagePlaceholder';
+import { Breadcrumb } from '@/app/components/Breadcrumb';
 import { PLACEHOLDERS } from '@/app/lib/assets';
 import type { PageAssetsConfig } from '@/app/lib/assets';
 import { Package, Ship, FileText, Calculator, Truck, CheckCircle } from 'lucide-react';
@@ -62,6 +63,13 @@ export function PackagingLogisticsPage({ lang }: PackagingLogisticsPageProps) {
           overlay={pageAssets.hero.overlay}
           placeholderKey="packaging_shipping_hero"
         />
+
+        {/* Breadcrumb */}
+        <div className="w-full bg-gray-50 py-4 border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-4">
+            <Breadcrumb lang={lang} />
+          </div>
+        </div>
 
         {/* Packaging Standards Section */}
         <section className="py-20 bg-gray-50">

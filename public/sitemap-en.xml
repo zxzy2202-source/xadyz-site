@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://xadyz.com/en/</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en" />
@@ -13,7 +13,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/products</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/products" />
@@ -23,7 +23,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/thermal-paper-rolls</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-paper-rolls" />
@@ -33,7 +33,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/thermal-paper-rolls/blank</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-paper-rolls/blank" />
@@ -43,7 +43,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/thermal-paper-rolls/printed</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-paper-rolls/printed" />
@@ -52,8 +52,38 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/thermal-paper-rolls/printed" />
   </url>
   <url>
+    <loc>https://xadyz.com/en/thermal-paper-rolls/pos</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-paper-rolls/pos" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/thermal-paper-rolls/pos" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/thermal-paper-rolls/pos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/thermal-paper-rolls/pos" />
+  </url>
+  <url>
+    <loc>https://xadyz.com/en/thermal-paper-rolls/atm</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-paper-rolls/atm" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/thermal-paper-rolls/atm" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/thermal-paper-rolls/atm" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/thermal-paper-rolls/atm" />
+  </url>
+  <url>
+    <loc>https://xadyz.com/en/thermal-paper-rolls/bpa-free</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-paper-rolls/bpa-free" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/thermal-paper-rolls/bpa-free" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/thermal-paper-rolls/bpa-free" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/thermal-paper-rolls/bpa-free" />
+  </url>
+  <url>
     <loc>https://xadyz.com/en/thermal-labels</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-labels" />
@@ -63,7 +93,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/thermal-labels/blank</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-labels/blank" />
@@ -73,7 +103,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/thermal-labels/printed</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-labels/printed" />
@@ -82,68 +112,38 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/thermal-labels/printed" />
   </url>
   <url>
-    <loc>https://xadyz.com/en/pos-thermal-paper</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/pos-thermal-paper" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/pos-thermal-paper" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/pos-thermal-paper" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/pos-thermal-paper" />
-  </url>
-  <url>
-    <loc>https://xadyz.com/en/atm-thermal-paper</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/atm-thermal-paper" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/atm-thermal-paper" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/atm-thermal-paper" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/atm-thermal-paper" />
-  </url>
-  <url>
-    <loc>https://xadyz.com/en/bpa-free-thermal-paper</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/bpa-free-thermal-paper" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/bpa-free-thermal-paper" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/bpa-free-thermal-paper" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/bpa-free-thermal-paper" />
-  </url>
-  <url>
-    <loc>https://xadyz.com/en/thermal-labels-4x6</loc>
-    <lastmod>2026-02-25</lastmod>
+    <loc>https://xadyz.com/en/thermal-labels/4x6</loc>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-labels-4x6" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/thermal-labels-4x6" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/thermal-labels-4x6" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/thermal-labels-4x6" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-labels/4x6" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/thermal-labels/4x6" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/thermal-labels/4x6" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/thermal-labels/4x6" />
   </url>
   <url>
-    <loc>https://xadyz.com/en/thermal-labels-a6</loc>
-    <lastmod>2026-02-25</lastmod>
+    <loc>https://xadyz.com/en/thermal-labels/a6</loc>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-labels-a6" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/thermal-labels-a6" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/thermal-labels-a6" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/thermal-labels-a6" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-labels/a6" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/thermal-labels/a6" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/thermal-labels/a6" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/thermal-labels/a6" />
   </url>
   <url>
-    <loc>https://xadyz.com/en/logistics-labels</loc>
-    <lastmod>2026-02-25</lastmod>
+    <loc>https://xadyz.com/en/thermal-labels/logistics</loc>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/logistics-labels" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/logistics-labels" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/logistics-labels" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/logistics-labels" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/thermal-labels/logistics" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/thermal-labels/logistics" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/thermal-labels/logistics" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/thermal-labels/logistics" />
   </url>
   <url>
     <loc>https://xadyz.com/en/ncr-forms</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/ncr-forms" />
@@ -153,7 +153,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/ncr-forms/blank</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/ncr-forms/blank" />
@@ -163,7 +163,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/ncr-forms/printed</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/ncr-forms/printed" />
@@ -173,7 +173,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/ncr-forms/continuous</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/ncr-forms/continuous" />
@@ -183,7 +183,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/material-supply</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/material-supply" />
@@ -193,7 +193,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/material-supply/thermal-jumbo-rolls</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/material-supply/thermal-jumbo-rolls" />
@@ -203,7 +203,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/material-supply/self-adhesive-jumbo-rolls</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/material-supply/self-adhesive-jumbo-rolls" />
@@ -213,7 +213,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/material-supply/self-adhesive-sheets</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/material-supply/self-adhesive-sheets" />
@@ -223,7 +223,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/material-supply/ncr-jumbo-rolls</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/material-supply/ncr-jumbo-rolls" />
@@ -233,7 +233,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/material-supply/ncr-sheets</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/material-supply/ncr-sheets" />
@@ -243,7 +243,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/applications</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/applications" />
@@ -253,7 +253,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/applications/government-tenders</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/applications/government-tenders" />
@@ -262,7 +262,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/applications/retail-pos</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/applications/retail-pos" />
@@ -272,7 +272,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/applications/logistics-warehousing</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/applications/logistics-warehousing" />
@@ -282,7 +282,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/applications/supermarkets</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/applications/supermarkets" />
@@ -292,7 +292,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/applications/banking-finance</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/applications/banking-finance" />
@@ -302,7 +302,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/applications/healthcare</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/applications/healthcare" />
@@ -311,8 +311,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/applications/healthcare" />
   </url>
   <url>
+    <loc>https://xadyz.com/en/applications/request-tender-pack</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/applications/request-tender-pack" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/applications/request-tender-pack" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/applications/request-tender-pack" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/applications/request-tender-pack" />
+  </url>
+  <url>
     <loc>https://xadyz.com/en/manufacturing</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/manufacturing" />
@@ -322,7 +332,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/manufacturing/factory-overview</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/manufacturing/factory-overview" />
@@ -332,7 +342,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/manufacturing/production-lines</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/manufacturing/production-lines" />
@@ -342,7 +352,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/manufacturing/quality-control</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/manufacturing/quality-control" />
@@ -352,7 +362,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/manufacturing/packaging-shipping</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/manufacturing/packaging-shipping" />
@@ -362,7 +372,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/manufacturing/certifications</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/manufacturing/certifications" />
@@ -372,7 +382,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/manufacturing/oem-customization</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/manufacturing/oem-customization" />
@@ -382,7 +392,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/manufacturing/factory-journal</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/manufacturing/factory-journal" />
@@ -392,7 +402,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/resources</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/resources" />
@@ -402,7 +412,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/resources/blog-insights</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/resources/blog-insights" />
@@ -412,7 +422,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/resources/tools-calculators</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/resources/tools-calculators" />
@@ -422,7 +432,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/resources/faqs</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/resources/faqs" />
@@ -432,7 +442,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/resources/packaging-logistics</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/resources/packaging-logistics" />
@@ -442,7 +452,7 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/about</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/about" />
@@ -452,22 +462,12 @@
   </url>
   <url>
     <loc>https://xadyz.com/en/contact</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/contact" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/contact" />
     <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/contact" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/contact" />
-  </url>
-  <url>
-    <loc>https://xadyz.com/en/request-tender-pack</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://xadyz.com/en/request-tender-pack" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://xadyz.com/ru/request-tender-pack" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://xadyz.com/zh/request-tender-pack" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://xadyz.com/en/request-tender-pack" />
   </url>
 </urlset>

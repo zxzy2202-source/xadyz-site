@@ -74,6 +74,9 @@ export const NCRFormsPage: React.FC<NCRFormsPageProps> = ({ lang = 'en', type })
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'USD',
+      lowPrice: '0.05',
+      highPrice: '0.80',
+      offerCount: 1,
       availability: 'https://schema.org/InStock',
       seller: { '@type': 'Organization', name: 'Zhixin Paper' },
     },

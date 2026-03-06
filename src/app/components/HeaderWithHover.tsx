@@ -271,7 +271,7 @@ export const Header = () => {
         { name: '银行与金融', path: '/zh/applications/banking-finance', hoverKey: 'bankingFinance' },
         { name: '政府投标', path: '/zh/applications/government-tenders', hoverKey: 'governmentTenders' },
         { name: '医疗健康', path: '/zh/applications/healthcare', hoverKey: 'healthcare' },
-        { name: '申请投标资料包', path: '/zh/request-tender-pack', hoverKey: 'retailPos' },
+        { name: '申请投标资料包', path: '/zh/applications/request-tender-pack', hoverKey: 'retailPos' },
       ]
     },
     {
@@ -378,7 +378,7 @@ export const Header = () => {
         { name: 'Банковский сектор', path: '/ru/applications/banking-finance', hoverKey: 'bankingFinance' },
         { name: 'Государственные тендеры', path: '/ru/applications/government-tenders', hoverKey: 'governmentTenders' },
         { name: 'Здравоохранение', path: '/ru/applications/healthcare', hoverKey: 'healthcare' },
-        { name: 'Запросить тендерный пакет', path: '/ru/request-tender-pack', hoverKey: 'retailPos' },
+        { name: 'Запросить тендерный пакет', path: '/ru/applications/request-tender-pack', hoverKey: 'retailPos' },
       ]
     },
     {
@@ -485,7 +485,7 @@ export const Header = () => {
         { name: 'Banking & Finance', path: '/en/applications/banking-finance', hoverKey: 'bankingFinance' },
         { name: 'Government & Tenders', path: '/en/applications/government-tenders', hoverKey: 'governmentTenders' },
         { name: 'Healthcare', path: '/en/applications/healthcare', hoverKey: 'healthcare' },
-        { name: 'Request Tender Pack', path: '/en/request-tender-pack', hoverKey: 'retailPos' },
+        { name: 'Request Tender Pack', path: '/en/applications/request-tender-pack', hoverKey: 'retailPos' },
       ]
     },
     {

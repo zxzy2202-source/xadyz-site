@@ -33,8 +33,9 @@ const organizationSchema = {
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'CN',
-    addressRegion: 'Guangdong',
-    addressLocality: 'Guangzhou',
+    addressRegion: 'Shaanxi',
+    addressLocality: 'Xi\'an',
+    streetAddress: 'Gaoling District, Ronghao Industrial Park Phase 2, Building 15',
   },
   sameAs: [
     CONTACT.whatsappUrl,

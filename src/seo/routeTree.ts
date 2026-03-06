@@ -83,6 +83,9 @@ export const ROUTE_TREE: RouteNode[] = [
     children: [
       { seg: "blank", key: "blank", seo: { changefreq: "weekly", priority: 0.8 } },
       { seg: "printed", key: "printed", seo: { changefreq: "weekly", priority: 0.8 } },
+      { seg: "pos", key: "posThermalPaper", seo: { changefreq: "weekly", priority: 0.8 } },
+      { seg: "atm", key: "atmThermalPaper", seo: { changefreq: "weekly", priority: 0.8 } },
+      { seg: "bpa-free", key: "bpaFreeThermalPaper", seo: { changefreq: "weekly", priority: 0.8 } },
     ],
   },
   {
@@ -94,14 +97,11 @@ export const ROUTE_TREE: RouteNode[] = [
     children: [
       { seg: "blank", key: "blank", seo: { changefreq: "weekly", priority: 0.8 } },
       { seg: "printed", key: "printed", seo: { changefreq: "weekly", priority: 0.8 } },
+      { seg: "4x6", key: "thermalLabels4x6", seo: { changefreq: "weekly", priority: 0.7 } },
+      { seg: "a6", key: "thermalLabelsA6", seo: { changefreq: "weekly", priority: 0.7 } },
+      { seg: "logistics", key: "logisticsLabels", seo: { changefreq: "weekly", priority: 0.8 } },
     ],
   },
-  { seg: "pos-thermal-paper", key: "posThermalPaper", parentKey: "products", parentSeg: "products", seo: { changefreq: "weekly", priority: 0.8 } },
-  { seg: "atm-thermal-paper", key: "atmThermalPaper", parentKey: "products", parentSeg: "products", seo: { changefreq: "weekly", priority: 0.8 } },
-  { seg: "bpa-free-thermal-paper", key: "bpaFreeThermalPaper", parentKey: "products", parentSeg: "products", seo: { changefreq: "weekly", priority: 0.8 } },
-  { seg: "thermal-labels-4x6", key: "thermalLabels4x6", parentKey: "products", parentSeg: "products", seo: { changefreq: "weekly", priority: 0.7 } },
-  { seg: "thermal-labels-a6", key: "thermalLabelsA6", parentKey: "products", parentSeg: "products", seo: { changefreq: "weekly", priority: 0.7 } },
-  { seg: "logistics-labels", key: "logisticsLabels", parentKey: "products", parentSeg: "products", seo: { changefreq: "weekly", priority: 0.8 } },
   {
     seg: "ncr-forms",
     key: "ncrForms",
@@ -185,6 +185,11 @@ export const ROUTE_TREE: RouteNode[] = [
         seg: "healthcare", 
         key: "healthcare",
         seo: { changefreq: "monthly", priority: 0.7 }
+      },
+      {
+        seg: "request-tender-pack",
+        key: "requestTenderPack",
+        seo: { changefreq: "monthly", priority: 0.9 }
       },
     ],
   },
@@ -272,10 +277,5 @@ export const ROUTE_TREE: RouteNode[] = [
     seg: "contact", 
     key: "contact",
     seo: { changefreq: "monthly", priority: 0.7 } // Important for conversions
-  },
-  { 
-    seg: "request-tender-pack", 
-    key: "requestTenderPack",
-    seo: { changefreq: "monthly", priority: 0.9 } // High conversion value
   },
 ];

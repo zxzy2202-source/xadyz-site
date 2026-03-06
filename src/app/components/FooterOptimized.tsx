@@ -47,7 +47,7 @@ export const FooterOptimized = () => {
       solutionsMenu: [
         { name: 'Applications Overview', path: '/en/applications', icon: Briefcase },
         { name: 'Government & Tenders', path: '/en/applications/government-tenders', highlight: true, icon: Briefcase },
-        { name: 'Request Tender Pack', path: '/en/request-tender-pack', highlight: true, icon: FileText },
+        { name: 'Request Tender Pack', path: '/en/applications/request-tender-pack', highlight: true, icon: FileText },
       ],
       
       company: 'Company',
@@ -63,7 +63,7 @@ export const FooterOptimized = () => {
       instantMessaging: 'Instant Messaging',
       email: 'Email',
       phone: 'Phone',
-      factoryLocation: 'Factory Location: China',
+      factoryLocation: CONTACT.addressEn,
       
       // Trust signals
       trustSignals: {
@@ -110,7 +110,7 @@ export const FooterOptimized = () => {
       solutionsMenu: [
         { name: 'Государственные тендеры', path: '/ru/applications/government-tenders', highlight: true, icon: Briefcase },
         { name: 'Обзор применений', path: '/ru/applications', icon: Briefcase },
-        { name: 'Запросить тендерный пакет', path: '/ru/request-tender-pack', highlight: true, icon: FileText },
+        { name: 'Запросить тендерный пакет', path: '/ru/applications/request-tender-pack', highlight: true, icon: FileText },
       ],
       
       company: 'Компания',
@@ -125,7 +125,7 @@ export const FooterOptimized = () => {
       instantMessaging: 'Мессенджеры',
       email: 'Электронная почта',
       phone: 'Телефон',
-      factoryLocation: 'Расположение завода: Китай',
+      factoryLocation: CONTACT.addressRu,
       
       trustSignals: {
         experience: 'Опыт 15+ лет',
@@ -169,7 +169,7 @@ export const FooterOptimized = () => {
       solutionsMenu: [
         { name: '政府投标', path: '/zh/applications/government-tenders', highlight: true, icon: Briefcase },
         { name: '应用概览', path: '/zh/applications', icon: Briefcase },
-        { name: '申请投标资料包', path: '/zh/request-tender-pack', highlight: true, icon: FileText },
+        { name: '申请投标资料包', path: '/zh/applications/request-tender-pack', highlight: true, icon: FileText },
       ],
       
       company: '公司',
@@ -184,7 +184,7 @@ export const FooterOptimized = () => {
       instantMessaging: '即时通讯',
       email: '电子邮件',
       phone: '电话',
-      factoryLocation: '工厂位置：中国',
+      factoryLocation: CONTACT.addressZh,
       
       trustSignals: {
         experience: '15+年经验',
@@ -412,7 +412,7 @@ export const FooterOptimized = () => {
                 {/* Quick CTA */}
                 <div className="mt-4 pt-4 border-t border-gray-200">
                   <Link
-                    to={`/${lang}/request-tender-pack`}
+                    to={`/${lang}/applications/request-tender-pack`}
                     className="block text-center bg-blue-600 text-white px-4 py-2.5 rounded-lg hover:bg-blue-700 transition-colors text-sm font-bold"
                   >
                     📄 {content.solutionsMenu[2].name}

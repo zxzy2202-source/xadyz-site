@@ -153,7 +153,27 @@ export const MaterialSupplyOverviewPage: React.FC<MaterialSupplyOverviewPageProp
           </div>
         </section>
 
-        {/* 06: CTA Block */}
+        {/* 06: Finished Products Cross-link */}
+        <section className="max-w-7xl mx-auto px-4 mb-16">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <p className="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-2">
+                {lang === 'zh' ? '采购成品？' : lang === 'ru' ? 'Нужна готовая продукция?' : 'Need Finished Products?'}
+              </p>
+              <h3 className="text-2xl font-bold text-white">
+                {lang === 'zh' ? '热敏纸卷、热敏标签与 NCR 表格，工厂直供' : lang === 'ru' ? 'Термобумага в рулонах, этикетки и NCR-формы — прямо с завода' : 'Thermal Paper Rolls, Labels & NCR Forms — Direct from Factory'}
+              </h3>
+            </div>
+            <a
+              href={`/${lang}/products`}
+              className="flex-shrink-0 inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors whitespace-nowrap"
+            >
+              {lang === 'zh' ? '查看成品产品 →' : lang === 'ru' ? 'Смотреть готовую продукцию →' : 'View Finished Products →'}
+            </a>
+          </div>
+        </section>
+
+        {/* 07: CTA Block */}
         <ProductPageCta lang={lang} />
       </main>
 

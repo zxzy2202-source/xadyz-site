@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { Helmet } from 'react-helmet-async';
 import { supabasePublic } from '@/app/lib/supabasePublicClient';
 
 export interface PageHeroProps {
@@ -41,6 +42,7 @@ export function PageHero({
   placeholderKey,
 }: PageHeroProps) {
   const [dynamicImageUrl, setDynamicImageUrl] = React.useState<string | null>(null);
+  const [imageLoaded, setImageLoaded] = React.useState(false);
 
   // 从 Supabase 读取动态图片
   React.useEffect(() => {
@@ -62,6 +64,7 @@ export function PageHero({
 
         if (!cancelled && data?.file_url) {
           setDynamicImageUrl(data.file_url);
+          setImageLoaded(false);
         }
       } catch (err: any) {
         console.error('[PageHero] 异常:', err?.message || err);
@@ -74,6 +77,13 @@ export function PageHero({
     };
   }, [placeholderKey]);
 
+  // 若仅有 image.src（无 placeholderKey），图片加载完成后也要标记
+  const staticUrl = image?.src && !placeholderKey ? image.src : null;
+  React.useEffect(() => {
+    if (!staticUrl) return;
+    setImageLoaded(false);
+  }, [staticUrl]);
+
   const overlayClass = overlay === "dark" ? "pageHero--dark" : "pageHero--light";
   const sizeClass = size === "compact" ? "pageHero--compact" : "";
   const alignClass = align === "center" ? "pageHero--center" : "";
@@ -83,13 +93,29 @@ export function PageHero({
 
   return (
     <section className={`pageHero ${overlayClass} ${sizeClass} ${alignClass}`}>
-      {backgroundImageUrl && (
-        <div
-          className="pageHero__bg"
-          style={{ backgroundImage: `url('${backgroundImageUrl}')` }}
-          aria-hidden="true"
-        />
+      {/* 预加载首屏 Banner，减少白屏时间 */}
+      {image?.src && (
+        <Helmet>
+          <link rel="preload" href={image.src} as="image" />
+        </Helmet>
       )}
+      {/* 背景层：始终渲染。无图时显示占位色，有图时先占位色再淡入图片 */}
+      <div
+        className="pageHero__bg"
+        data-overlay={overlay}
+        aria-hidden="true"
+      >
+        {backgroundImageUrl && (
+          <img
+            src={backgroundImageUrl}
+            alt=""
+            className={`pageHero__bgImg ${imageLoaded ? 'pageHero__bgImg--loaded' : ''}`}
+            loading="eager"
+            fetchPriority="high"
+            onLoad={() => setImageLoaded(true)}
+          />
+        )}
+      </div>
       <div className="pageHero__overlay" />
       <div className="pageHero__inner">
         {eyebrow && <div className="pageHero__eyebrow">{eyebrow}</div>}
