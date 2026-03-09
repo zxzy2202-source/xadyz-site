@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import * as HelmetAsync from 'react-helmet-async';
 import { useLocation } from 'react-router';
 import { buildBreadcrumbJsonLd } from '@/seo/breadcrumbJsonLd';
 import { availableLangsForPath } from '@/seo/pageExists';
@@ -97,6 +97,9 @@ export const SEO: React.FC<SEOProps> = ({
   const imageUrl = (ogImage && ogImage.startsWith('http'))
     ? ogImage
     : (ogImage ? `${baseUrl}${ogImage}` : DEFAULT_OG_IMAGE);
+
+  // 兼容 CJS/ESM 的 Helmet 导出
+  const { Helmet } = (HelmetAsync as any);
 
   return (
     <Helmet>

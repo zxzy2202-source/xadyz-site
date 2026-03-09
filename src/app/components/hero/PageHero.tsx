@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Helmet } from 'react-helmet-async';
+import * as HelmetAsync from 'react-helmet-async';
 import { supabasePublic } from '@/app/lib/supabasePublicClient';
 
 export interface PageHeroProps {
@@ -95,9 +95,9 @@ export function PageHero({
     <section className={`pageHero ${overlayClass} ${sizeClass} ${alignClass}`}>
       {/* 预加载首屏 Banner，减少白屏时间 */}
       {image?.src && (
-        <Helmet>
+        <HelmetAsync.Helmet>
           <link rel="preload" href={image.src} as="image" />
-        </Helmet>
+        </HelmetAsync.Helmet>
       )}
       {/* 背景层：始终渲染。无图时显示占位色，有图时先占位色再淡入图片 */}
       <div

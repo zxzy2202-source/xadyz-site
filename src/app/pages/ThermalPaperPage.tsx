@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import * as HelmetAsync from 'react-helmet-async';
 import { Link } from 'react-router';
 import { SEO } from '@/app/components/SEO';
 import { PageHero } from '@/app/components/hero/PageHero';
@@ -104,7 +104,7 @@ export const ThermalPaperPage: React.FC<ThermalPaperPageProps> = ({ lang = 'en',
     manufacturer: {
       '@type': 'Organization',
       name: 'Zhixin Paper',
-      url: 'https://www.xadyz.com',
+      url: 'https://xadyz.com',
     },
     category: 'Thermal Paper / POS Rolls',
     offers: {
@@ -117,6 +117,8 @@ export const ThermalPaperPage: React.FC<ThermalPaperPageProps> = ({ lang = 'en',
       seller: { '@type': 'Organization', name: 'Zhixin Paper' },
     },
   };
+
+  const { Helmet } = (HelmetAsync as any);
 
   return (
     <>

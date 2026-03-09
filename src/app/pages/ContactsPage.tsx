@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import * as HelmetAsync from 'react-helmet-async';
 import { SEO } from '@/app/components/SEO';
 import { PageHero } from '@/app/components/hero/PageHero';
 import { CONTACT } from '@/app/lib/contactConfig';
@@ -69,9 +69,9 @@ export const ContactsPage = ({ lang }: { lang: 'en' | 'ru' | 'zh' }) => {
         lang={lang}
         canonical={lang === 'zh' ? '/zh/contact' : lang === 'ru' ? '/ru/contact' : '/en/contact'}
       />
-      <Helmet>
+      <HelmetAsync.Helmet>
         <script type="application/ld+json">{JSON.stringify(contactPointJsonLd)}</script>
-      </Helmet>
+      </HelmetAsync.Helmet>
       <PageShell lang={lang} hero={heroContent}>
 
         {/* Trust Bar */}

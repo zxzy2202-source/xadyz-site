@@ -8,10 +8,10 @@
  * 后台写入场景：同一实例，由 RLS 策略 + 用户登录态控制权限
  */
 import { createClient } from '@supabase/supabase-js';
-import { projectId, publicAnonKey } from '/utils/supabase/info';
-
+import { projectId, publicAnonKey } from './info';
+ 
 const supabaseUrl = `https://${projectId}.supabase.co`;
-
+ 
 export const supabase = createClient(supabaseUrl, publicAnonKey);
 
 // 验证 auth 会话，避免无效 JWT（user.id 为 undefined）污染后端
