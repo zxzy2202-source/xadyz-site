@@ -2,9 +2,15 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
+  "crons": [
+    {
+      "path": "/api/keep-alive",
+      "schedule": "0 3 1,6,11,16,21,26 * *"
+    }
+  ],
   "rewrites": [
     {
-      "source": "/((?!sitemap.*\\.xml|robots\\.txt|images/|favicon\\.svg|logo\\.png|og-image\\.svg).*)",
+      "source": "/((?!sitemap.*\\.xml|robots\\.txt|images/|favicon\\.svg|logo\\.png|og-image\\.svg|api/).*)",
       "destination": "/index.html"
     }
   ],
