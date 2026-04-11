@@ -112,11 +112,11 @@ export interface LandingContent {
 export const content: Record<Lang, LandingContent> = {
   en: {
     seo: {
-      title: 'Thermal Paper & Labels Manufacturer | FSC-Certified | European Markets | Zhixin',
+      title: 'Thermal Paper & Labels Manufacturer | FSC-Certified | Russia & CIS Markets | Zhixin',
       description:
-        'Top-tier thermal paper rolls, thermal labels, and NCR forms for European markets. 30 tons daily, 200,000 rolls daily. BPA-free, FSC-certified. Factory direct.',
+        'Top-tier thermal paper rolls, thermal labels, and NCR forms for Russia, Kazakhstan and CIS markets. 30 tons daily, 200,000 rolls daily. BPA-free, FSC-certified. Factory direct.',
       keywords:
-        'thermal paper manufacturer Europe, thermal till rolls, shipping labels, FSC certified thermal paper, BPA-free receipt paper, OEM thermal labels',
+        'thermal paper manufacturer Russia Kazakhstan CIS, thermal till rolls, shipping labels, FSC certified thermal paper, BPA-free receipt paper, OEM thermal labels wholesale',
     },
 
     hero: {
@@ -133,7 +133,7 @@ export const content: Record<Lang, LandingContent> = {
 
     statistics: {
       items: [
-        { value: '45', label: 'Production Staff', icon: 'users' },
+        { value: '65', label: 'Total Staff', icon: 'users' },
         { value: '30 Tons', label: 'Daily Printing', icon: 'factory' },
         { value: '200,000', label: 'Rolls Daily Slitting', icon: 'package' },
         { value: '10', label: 'International Sales Experts', icon: 'globe' },
@@ -178,7 +178,7 @@ export const content: Record<Lang, LandingContent> = {
 
     compliance: {
       sectionTitle: 'Compliance & Certifications',
-      subtext: 'Meeting EU regulations and global standards',
+      subtext: 'Meeting CIS market standards and international quality requirements',
       cta: 'View All Certifications',
       ctaLink: '/en/manufacturing/certifications',
       badges: [
@@ -210,7 +210,7 @@ export const content: Record<Lang, LandingContent> = {
         {
           icon: 'globe',
           title: 'Export and project experience',
-          desc: 'Serving European wholesalers and brand owners since 2009, familiar with EU standards and documentation.',
+          desc: 'Serving CIS and Central Asian wholesalers since 2009, familiar with Russia/Kazakhstan import requirements and documentation.',
         },
       ],
     },
@@ -281,7 +281,7 @@ export const content: Record<Lang, LandingContent> = {
 
     statistics: {
       items: [
-        { value: '45', label: 'Производственный персонал', icon: 'users' },
+        { value: '65', label: 'Сотрудников всего', icon: 'users' },
         { value: '30 т', label: 'Печать в день', icon: 'factory' },
         { value: '200 000', label: 'Рулонов в день', icon: 'package' },
         { value: '10', label: 'Международных экспертов', icon: 'globe' },
@@ -358,7 +358,7 @@ export const content: Record<Lang, LandingContent> = {
         {
           icon: 'globe',
           title: 'Опыт экспортных и проектных поставок',
-          desc: 'Работаем с европейскими оптовиками и брендами с 2009 года, знаем стандарты и требования ЕС.',
+          desc: 'Работаем с оптовиками России, Казахстана и стран СНГ с 2009 года, знаем требования к документации и логистике.',
         },
       ],
     },
@@ -424,7 +424,7 @@ export const content: Record<Lang, LandingContent> = {
 
     statistics: {
       items: [
-        { value: '45', label: '生产人员', icon: 'users' },
+        { value: '65', label: '全体员工', icon: 'users' },
         { value: '30吨', label: '日印刷产能', icon: 'factory' },
         { value: '20万', label: '日分切卷数', icon: 'package' },
         { value: '10', label: '国际销售专员', icon: 'globe' },
@@ -469,7 +469,7 @@ export const content: Record<Lang, LandingContent> = {
 
     compliance: {
       sectionTitle: '合规与认证',
-      subtext: '符合欧盟法规及国际标准',
+      subtext: '符合独联体市场标准及国际质量要求',
       cta: '查看全部认证',
       ctaLink: '/zh/manufacturing/certifications',
       badges: [
@@ -501,7 +501,7 @@ export const content: Record<Lang, LandingContent> = {
         {
           icon: 'globe',
           title: '出口和项目经验',
-          desc: '自2009年起服务欧洲批发商和品牌商，熟悉欧盟标准和文件要求。',
+          desc: '自2009年起服务俄罗斯、哈萨克斯坦及独联体批发商，熟悉进口要求和文件规范。',
         },
       ],
     },

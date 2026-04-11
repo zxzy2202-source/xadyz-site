@@ -20,9 +20,9 @@ const organizationSchema = {
   },
   image: `${BASE_URL}/og-image.svg`,
   description:
-    'B2B manufacturer of thermal paper rolls, direct thermal labels, NCR forms, and self-adhesive materials. Factory direct, ISO certified, export to 50+ countries.',
+    'B2B manufacturer of thermal paper rolls, direct thermal labels, NCR forms, and self-adhesive materials. Factory direct, ISO certified, serving Russia, Kazakhstan and CIS markets since 2009.',
   foundingDate: '2009',
-  numberOfEmployees: { '@type': 'QuantitativeValue', value: 500 },
+  numberOfEmployees: { '@type': 'QuantitativeValue', value: 65 },
   contactPoint: [
     {
       '@type': 'ContactPoint',

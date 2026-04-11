@@ -63,9 +63,9 @@ export const content: Record<Lang, ProductsContent> = {
       sectionTitle: 'Manufacturing Capabilities',
       items: [
         { icon: 'factory', label: 'Annual Capacity', value: '5,000+ tons' },
-        { icon: 'settings', label: 'Production Lines', value: '8 converting lines' },
+        { icon: 'settings', label: 'Production Lines', value: '15 slitting + 4 printing' },
         { icon: 'users', label: 'Quality System', value: 'ISO 9001 certified' },
-        { icon: 'globe', label: 'Export Markets', value: '40+ countries' },
+        { icon: 'globe', label: 'Export Markets', value: '50+ countries' },
       ],
     },
     customization: {
@@ -116,9 +116,9 @@ export const content: Record<Lang, ProductsContent> = {
       sectionTitle: 'Производственные мощности',
       items: [
         { icon: 'factory', label: 'Годовая мощность', value: '5 000+ тонн' },
-        { icon: 'settings', label: 'Производственные линии', value: '8 линий конвертинга' },
+        { icon: 'settings', label: 'Производственные линии', value: '15 нарезных + 4 печатных' },
         { icon: 'users', label: 'Система качества', value: 'Сертификат ISO 9001' },
-        { icon: 'globe', label: 'Экспортные рынки', value: '40+ стран' },
+        { icon: 'globe', label: 'Экспортные рынки', value: '50+ стран' },
       ],
     },
     customization: {
@@ -169,9 +169,9 @@ export const content: Record<Lang, ProductsContent> = {
       sectionTitle: '生产能力',
       items: [
         { icon: 'factory', label: '年产能', value: '5000+吨' },
-        { icon: 'settings', label: '生产线', value: '8条分切线' },
+        { icon: 'settings', label: '生产线', value: '15分切 + 4印刷' },
         { icon: 'users', label: '质量体系', value: 'ISO 9001认证' },
-        { icon: 'globe', label: '出口市场', value: '40+国家' },
+        { icon: 'globe', label: '出口市场', value: '50+国家' },
       ],
     },
     customization: {
