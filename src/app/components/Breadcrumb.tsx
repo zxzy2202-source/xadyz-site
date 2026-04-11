@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import { useLocation } from "react-router";
 import { getBreadcrumbData } from "@/seo/breadcrumbData";
 import type { Lang } from "@/seo/routeTree";
 
@@ -12,19 +13,20 @@ type Props = {
  * @param lang - Language code (en, ru, zh) - REQUIRED
  * 
  * Automatically generates breadcrumb trail based on:
- * - Current pathname (from window.location)
+ * - Current pathname (from React Router useLocation)
  * - ROUTE_TREE structure
  * - CRUMB_I18N translations
  * 
  * Features:
  * - Single source of truth (routeTree.ts)
- * - Auto-syncs with routing changes
+ * - Auto-syncs with routing changes (uses useLocation, not window.location)
  * - SEO-friendly structured data ready
  * - Home page returns null (no breadcrumb)
  * - Last item not clickable (current page)
  */
 export function Breadcrumb({ lang }: Props) {
-  const pathname = typeof window !== "undefined" ? window.location.pathname : `/${lang}`;
+  const location = useLocation();
+  const pathname = location.pathname;
 
   const crumbs = useMemo(() => getBreadcrumbData(pathname), [pathname]);
 

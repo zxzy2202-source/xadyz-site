@@ -19,7 +19,7 @@ const content = {
       { label: 'Thermal Labels', path: '/en/thermal-labels' },
       { label: 'NCR Forms', path: '/en/ncr-forms' },
       { label: 'About Us', path: '/en/about' },
-      { label: 'Request Tender Pack', path: '/en/request-tender-pack' },
+      { label: 'Request Tender Pack', path: '/en/applications/request-tender-pack' },
     ],
   },
   ru: {
@@ -35,7 +35,7 @@ const content = {
       { label: 'Термоэтикетки', path: '/ru/thermal-labels' },
       { label: 'NCR-формы', path: '/ru/ncr-forms' },
       { label: 'О нас', path: '/ru/about' },
-      { label: 'Тендерный пакет', path: '/ru/request-tender-pack' },
+      { label: 'Тендерный пакет', path: '/ru/applications/request-tender-pack' },
     ],
   },
   zh: {
@@ -51,7 +51,7 @@ const content = {
       { label: '热敏标签', path: '/zh/thermal-labels' },
       { label: 'NCR表格', path: '/zh/ncr-forms' },
       { label: '关于我们', path: '/zh/about' },
-      { label: '申请投标资料包', path: '/zh/request-tender-pack' },
+      { label: '申请投标资料包', path: '/zh/applications/request-tender-pack' },
     ],
   },
 };

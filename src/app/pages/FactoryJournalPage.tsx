@@ -10,7 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { PLACEHOLDERS } from '@/app/lib/assets';
 import type { PageAssetsConfig } from '@/app/lib/assets';
 import { Calendar, Package, Wrench, ClipboardCheck, Layers, Users, ArrowRight, Send, ChevronDown, ChevronUp, CheckCircle2 } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import {
   fetchFactoryJournalList,
   formatWeekOf,

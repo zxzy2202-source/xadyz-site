@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router';
 import { Globe, Factory, TrendingUp, Award, Users, Send, Mail, Package, Phone } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { ImagePlaceholder } from '@/app/components/ImagePlaceholder';
 import { Header } from '@/app/components/Header';
 import { Breadcrumb } from '@/app/components/Breadcrumb';

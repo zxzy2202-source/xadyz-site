@@ -15,8 +15,8 @@ const organizationSchema = {
   logo: {
     '@type': 'ImageObject',
     url: `${BASE_URL}/logo.png`,
-    width: 512,
-    height: 512,
+    width: 1024,
+    height: 1024,
   },
   image: `${BASE_URL}/og-image.svg`,
   description:

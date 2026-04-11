@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { CONTACT } from '@/app/lib/contactConfig';
 import { Phone, Send, FileText, Grid3x3, CheckCircle, Settings, Truck } from 'lucide-react';
 import { PageHero } from '@/app/components/hero/PageHero';

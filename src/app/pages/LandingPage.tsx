@@ -71,6 +71,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ lang = 'en' }) => {
         description={t.seo.description}
         keywords={t.seo.keywords}
         lang={lang}
+        canonical={`/${lang}/`}
+        hreflangs={{
+          en: '/en/',
+          ru: '/ru/',
+          zh: '/zh/',
+        }}
       />
 
       <Header />
@@ -112,7 +118,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ lang = 'en' }) => {
                 className={`h-2.5 rounded-full transition-all ${
                   index === activeIndex ? 'w-6 bg-white' : 'w-2.5 bg-white/60 hover:bg-white'
                 }`}
-                aria-label={`切换到第 ${index + 1} 张 Banner`}
+                aria-label={lang === 'zh' ? `切换到第 ${index + 1} 张 Banner` : lang === 'ru' ? `Перейти к слайду ${index + 1}` : `Go to slide ${index + 1}`}
               />
             ))}
           </div>

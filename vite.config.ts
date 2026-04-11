@@ -38,7 +38,7 @@ export default defineConfig({
          *
          * Chunk strategy:
          *  react-vendor    – React core + router  (loaded on every page, cached longest)
-         *  animation       – framer-motion + motion  (~400 KB combined, lazy-page only)
+         *  animation       – framer-motion  (~400 KB, lazy-page only)
          *  radix           – all @radix-ui/*  (~200 KB, shared across UI components)
          *  supabase        – @supabase/supabase-js  (~110 KB, only blog/admin pages)
          *  ui-utils        – lucide-react, sonner, clsx, tailwind-merge, react-helmet-async
@@ -58,7 +58,7 @@ export default defineConfig({
             }
 
             // Animation libraries (heaviest vendor bundle)
-            if (id.includes('/framer-motion/') || id.includes('/motion/')) {
+            if (id.includes('/framer-motion/')) {
               return 'animation';
             }
 
@@ -108,8 +108,9 @@ export default defineConfig({
 
   // Dev server — host: true 让局域网内其他设备也能访问
   server: {
-    host: true,   // 监听 0.0.0.0，而不只是 localhost
+    host: true,         // 监听 0.0.0.0，而不只是 localhost
     port: 5173,
+    allowedHosts: true, // 允许所有 Host 头（代理/隧道访问时需要）
   },
 
   // Preview server configuration (for testing)

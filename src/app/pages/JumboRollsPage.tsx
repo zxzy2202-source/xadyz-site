@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router';
 import { CheckCircle, Layers, Package, Phone, Send, Settings, Truck } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Header } from '@/app/components/Header';
 import { Breadcrumb } from '@/app/components/Breadcrumb';
 import { FooterOptimized as Footer } from '@/app/components/FooterOptimized';

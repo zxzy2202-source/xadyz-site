@@ -2,50 +2,36 @@
 # Domain: xadyz.com
 # Optimized for Yandex and Google
 
-# Allow all crawlers by default
+# ── Default: allow all crawlers ──────────────────────────────────────────────
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://xadyz.com/sitemap.xml
-
-# Block admin area from all crawlers
+# Block admin area
 Disallow: /admin/
-Disallow: /admin/*
 
-# Allow language-specific pages
-Allow: /en/
-Allow: /ru/
-Allow: /zh/
+# Block API and tracking parameters
+Disallow: /api/
 
-# Specific rules for Yandex (primary target market)
+# Sitemap locations
+Sitemap: https://xadyz.com/sitemap.xml
+Sitemap: https://xadyz.com/sitemap-en.xml
+Sitemap: https://xadyz.com/sitemap-ru.xml
+Sitemap: https://xadyz.com/sitemap-zh.xml
+
+# ── Yandex (primary CIS market) ──────────────────────────────────────────────
 User-agent: Yandex
 Allow: /
+Disallow: /admin/
 Crawl-delay: 1
 
-# Specific rules for Google
+# ── Google ───────────────────────────────────────────────────────────────────
 User-agent: Googlebot
 Allow: /
+Disallow: /admin/
 Crawl-delay: 1
 
-# Specific rules for Bingbot
+# ── Bing ─────────────────────────────────────────────────────────────────────
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
 Crawl-delay: 1
-
-# Block common resource-heavy paths
-Disallow: /api/
-Disallow: /*.json$
-Disallow: /*?*utm_*
-Disallow: /*?*ref=*
-
-# Allow CSS and JS files for proper rendering
-User-agent: *
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
