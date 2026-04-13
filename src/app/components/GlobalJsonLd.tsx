@@ -1,4 +1,4 @@
-import * as HelmetAsync from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { CONTACT } from '@/app/lib/contactConfig';
 
 const BASE_URL = typeof import.meta !== 'undefined' && import.meta.env?.VITE_SITE_URL
@@ -65,7 +65,6 @@ const websiteSchema = {
 };
 
 export function GlobalJsonLd() {
-  const { Helmet } = (HelmetAsync as any);
   return (
     <Helmet>
       <script type="application/ld+json">

@@ -29,9 +29,9 @@ export interface ThermalLabelsContent {
 export const content: Record<Lang, ThermalLabelsContent> = {
   en: {
     hero: {
-      h1: 'Direct Thermal Labels',
-      subheading: 'In-house manufactured thermal labels for logistics and tracking',
-      intro: 'We manufacture thermal label rolls in-house, supplying blank and printed labels for logistics, warehousing, and barcode-based identification systems.'
+      h1: 'Thermal Labels for Logistics, Warehousing, and Repeat Fulfillment',
+      subheading: 'In-house manufactured thermal labels for shipping, barcode operations, and branded labeling programs.',
+      intro: 'We supply blank and printed thermal label rolls with stable adhesive performance, clear barcode printing, and OEM flexibility for logistics teams, distributors, and e-commerce operations.'
     },
     overview: {
       paragraph: 'Thermal labels are widely used for shipping, tracking, and identification in logistics and retail operations. Our production focuses on print clarity, adhesive stability, and consistent die-cut accuracy.',
@@ -58,24 +58,24 @@ export const content: Record<Lang, ThermalLabelsContent> = {
           title: 'Blank Thermal Labels',
           shortDesc: 'Standard thermal label rolls for logistics and distribution.',
           bullets: ['Compatible with common label printers', 'Stable adhesive options', 'Consistent label spacing'],
-          cta: 'Request Info',
-          ctaLink: '/en/contact'
+          cta: 'Request Samples',
+          ctaLink: '/en/contact?intent=sample&inquiry=thermal_labels'
         },
         {
           id: 'printed',
           title: 'Printed Thermal Labels',
           shortDesc: 'Custom printed thermal labels for branding and tracking needs.',
           bullets: ['Logo and variable data printing', 'Suitable for logistics and e-commerce', 'Clear barcode readability'],
-          cta: 'Request Info',
-          ctaLink: '/en/contact'
+          cta: 'Request Samples',
+          ctaLink: '/en/contact?intent=sample&inquiry=thermal_labels'
         },
         {
           id: 'supply',
           title: 'Supply Options',
           shortDesc: 'Flexible supply models for different labeling projects.',
           bullets: ['Regular and contract-based supply', 'Stable production scheduling', 'Export-ready packaging'],
-          cta: 'Request Info',
-          ctaLink: '/en/contact'
+          cta: 'Request Samples',
+          ctaLink: '/en/contact?intent=sample&inquiry=thermal_labels'
         }
       ]
     },
@@ -116,10 +116,10 @@ export const content: Record<Lang, ThermalLabelsContent> = {
       ]
     },
     ctaBlock: {
-      headline: 'Need reliable thermal labels for logistics?',
-      subtext: 'Contact our team for specifications, samples, and project support.',
+      headline: 'Need pricing or samples for your thermal label workflow?',
+      subtext: 'Share your label size, adhesive requirement, and shipping application. We support logistics, warehouse, and e-commerce programs.',
       button: 'Request a Quote',
-      buttonLink: '/en/contact'
+      buttonLink: '/en/contact?intent=quote&inquiry=thermal_labels'
     },
     seo: {
       title: 'Thermal Labels Manufacturer | Logistics & Shipping Labels | Zhixin',
@@ -130,9 +130,9 @@ export const content: Record<Lang, ThermalLabelsContent> = {
 
   ru: {
     hero: {
-      h1: 'Термоэтикетки',
-      subheading: 'Термоэтикетки собственного производства для логистики и маркировки',
-      intro: 'Мы производим термоэтикетки в рулонах на собственном заводе, поставляя пустые и печатные этикетки для логистики, складов и систем штрихкодирования.'
+      h1: 'Термоэтикетки для логистики, склада и регулярных поставок',
+      subheading: 'Собственное производство термоэтикеток для отгрузок, штрихкодов и программ маркировки.',
+      intro: 'Мы поставляем пустые и печатные термоэтикетки со стабильным клеевым слоем, чёткой печатью штрихкодов и OEM-вариантами для логистики, дистрибьюции и e-commerce.'
     },
     overview: {
       paragraph: 'Термоэтикетки широко применяются для доставки, отслеживания и идентификации в логистике и розничной торговле. Мы уеляем особое внимание четкости печати, стабильности клеевого слоя и точности высечки.',
@@ -159,24 +159,24 @@ export const content: Record<Lang, ThermalLabelsContent> = {
           title: 'Пустые термоэтикетки',
           shortDesc: 'Стандартные рулоны термоэтикеток для логистики и дистрибуции.',
           bullets: ['Совместимы с популярными принтерами этикеток', 'Надежный клеевой слой', 'Равномерный шаг этикеток'],
-          cta: 'Запросить информацию',
-          ctaLink: '/ru/contact'
+          cta: 'Запросить образцы',
+          ctaLink: '/ru/contact?intent=sample&inquiry=thermal_labels'
         },
         {
           id: 'printed',
           title: 'Печатные термоэтикетки',
           shortDesc: 'Термоэтикетки с печатью для брендинга и отслеживания.',
           bullets: ['Печать логотипов и переменных данных', 'Подходит для логистики и e-commerce', 'Четкая читаемость штрихкодов'],
-          cta: 'Запросить информацию',
-          ctaLink: '/ru/contact'
+          cta: 'Запросить образцы',
+          ctaLink: '/ru/contact?intent=sample&inquiry=thermal_labels'
         },
         {
           id: 'supply',
           title: 'Варианты поставки',
           shortDesc: 'Гибкие модели поставок для различных проектов маркировки.',
           bullets: ['Регулярные и контрактные поставки', 'Планируемое производство', 'Экспортная упаковка'],
-          cta: 'Запросить информацию',
-          ctaLink: '/ru/contact'
+          cta: 'Запросить образцы',
+          ctaLink: '/ru/contact?intent=sample&inquiry=thermal_labels'
         }
       ]
     },

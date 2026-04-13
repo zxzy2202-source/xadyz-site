@@ -1,5 +1,6 @@
 import React from 'react';
 import { supabasePublic } from '@/app/lib/supabasePublicClient';
+import { hasSupabaseConfig } from '@/lib/supabase/info';
 import { Image as ImageIcon, Factory, Package, Briefcase, Layers } from 'lucide-react';
 
 /**
@@ -98,7 +99,7 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
   React.useEffect(() => {
     let cancelled = false;
     async function fetchBoundImage() {
-      if (!placeholderKey) return;
+      if (!placeholderKey || !hasSupabaseConfig) return;
       try {
         setIsLoading(true);
         const { data, error } = await supabasePublic

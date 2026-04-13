@@ -1,5 +1,5 @@
 import React from 'react';
-import * as HelmetAsync from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
 import { SEO } from '@/app/components/SEO';
 import { PageHero } from '@/app/components/hero/PageHero';
@@ -62,6 +62,14 @@ export const ThermalLabelsPage: React.FC<ThermalLabelsPageProps> = ({ lang = 'en
     <PageHero
       title={heroTitle}
       description={t.hero.subheading ? `${t.hero.subheading} ${t.hero.intro}` : t.hero.intro}
+      primaryCta={{
+        label: lang === 'zh' ? '索取报价' : lang === 'ru' ? 'Запросить расчёт' : 'Request Quote',
+        href: getContactInquiryUrl(lang, 'thermal_labels', 'quote'),
+      }}
+      secondaryCta={{
+        label: lang === 'zh' ? '申请样品' : lang === 'ru' ? 'Запросить образцы' : 'Request Samples',
+        href: getContactInquiryUrl(lang, 'thermal_labels', 'sample'),
+      }}
       image={{ src: pageAssets.hero.src, alt: pageAssets.hero.alt }}
       overlay={pageAssets.hero.overlay}
       placeholderKey="thermal_labels_hero"
@@ -90,8 +98,6 @@ export const ThermalLabelsPage: React.FC<ThermalLabelsPageProps> = ({ lang = 'en
       seller: { '@type': 'Organization', name: 'Zhixin Paper' },
     },
   };
-
-  const { Helmet } = (HelmetAsync as any);
 
   return (
     <>
@@ -158,14 +164,14 @@ export const ThermalLabelsPage: React.FC<ThermalLabelsPageProps> = ({ lang = 'en
                   
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Link 
-                      to={type.ctaLink}
+                      to={getContactInquiryUrl(lang, 'thermal_labels', 'sample')}
                       className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 hover:scale-105 transition-all"
                     >
                       {type.cta}
                       <ArrowRight size={20} />
                     </Link>
                     <Link 
-                      to={getContactInquiryUrl(lang, 'thermal_labels')}
+                      to={getContactInquiryUrl(lang, 'thermal_labels', 'quote')}
                       className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all"
                     >
                       {lang === 'zh' ? '快速询价' : lang === 'ru' ? 'Быстрый запрос' : 'Quick Quote'}
@@ -275,7 +281,14 @@ export const ThermalLabelsPage: React.FC<ThermalLabelsPageProps> = ({ lang = 'en
         </section>
 
         {/* 08: CTA Block */}
-        <ProductPageCta lang={lang} />
+        <ProductPageCta
+          lang={lang}
+          headline={t.ctaBlock.headline}
+          subtext={t.ctaBlock.subtext}
+          primaryButton={t.ctaBlock.button}
+          primaryLink={getContactInquiryUrl(lang, 'thermal_labels', 'quote')}
+          secondaryLink={getContactInquiryUrl(lang, 'thermal_labels', 'sample')}
+        />
       </PageShell>
     </>
   );

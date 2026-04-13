@@ -10,6 +10,28 @@ type MatchedNode = { seg: string; key: string; parentKey?: string; parentSeg?: s
 
 export type CrumbItem = { name: string; href: string };
 
+const LOGICAL_CHILD_PARENTS = {
+  thermalPaperRolls: {
+    blank: "blankThermalRolls",
+    printed: "printedThermalRolls",
+  },
+  thermalLabels: {
+    blank: "blankThermalLabels",
+    printed: "printedThermalLabels",
+  },
+  ncrForms: {
+    blank: "blankNcrForms",
+    printed: "printedNcrForms",
+  },
+} as const;
+
+function resolveNameKey(key: string, parentKey?: string): string {
+  if (!parentKey) return key;
+  const scoped = LOGICAL_CHILD_PARENTS[parentKey as keyof typeof LOGICAL_CHILD_PARENTS];
+  if (!scoped) return key;
+  return scoped[key as keyof typeof scoped] ?? key;
+}
+
 function matchByTree(
   segments: string[],
   tree: RouteNode[],
@@ -20,7 +42,13 @@ function matchByTree(
 
   for (let i = 0; i < segments.length && i < maxDepth; i++) {
     const seg = segments[i];
-    const node = currentLevel.find((n) => n.seg === seg);
+    let node = currentLevel.find((n) => n.seg === seg);
+
+    // Product detail pages are routed flat (/thermal-paper-rolls), but breadcrumbs
+    // also need to understand logical nested URLs (/products/thermal-paper-rolls).
+    if (!node && out.length === 1 && out[0].key === "products") {
+      node = tree.find((n) => n.seg === seg && n.parentKey === "products");
+    }
 
     if (!node) break;
 
@@ -62,15 +90,41 @@ export function getBreadcrumbData(pathname: string): CrumbItem[] {
   const list: CrumbItem[] = [{ name: map.home, href: `/${lang}` }];
   let acc = `/${lang}`;
   const parentInserted = new Set<string>();
+  const seenKeys = new Set<string>();
 
-  for (const m of matched) {
-    if (m.parentKey && m.parentSeg && !parentInserted.has(m.parentKey)) {
+  matched.forEach((m, idx) => {
+    if (
+      m.parentKey &&
+      m.parentSeg &&
+      !parentInserted.has(m.parentKey) &&
+      !seenKeys.has(m.parentKey)
+    ) {
       parentInserted.add(m.parentKey);
       list.push({ name: map[m.parentKey] ?? m.parentSeg, href: `${acc}/${m.parentSeg}` });
     }
     acc += `/${m.seg}`;
-    list.push({ name: map[m.key] ?? m.seg, href: acc });
-  }
+    const parentKey = idx > 0 ? matched[idx - 1].key : undefined;
+    const nameKey = resolveNameKey(m.key, parentKey);
+    list.push({ name: map[nameKey] ?? map[m.key] ?? m.seg, href: acc });
+    seenKeys.add(m.key);
+  });
 
   return list;
+}
+
+export function debugMatchPath(pathname: string): {
+  lang: Lang;
+  segments: string[];
+  matched: MatchedNode[];
+} {
+  const clean = pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
+  const lang = inferLang(clean);
+  const allSegments = clean.split("/").filter(Boolean);
+  const segments = allSegments[0] === lang ? allSegments.slice(1) : allSegments;
+
+  return {
+    lang,
+    segments,
+    matched: matchByTree(segments, ROUTE_TREE, 4),
+  };
 }

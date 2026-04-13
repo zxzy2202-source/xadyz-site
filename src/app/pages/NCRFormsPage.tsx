@@ -101,6 +101,14 @@ export const NCRFormsPage: React.FC<NCRFormsPageProps> = ({ lang = 'en', type })
           <PageHero
             title={heroTitle}
             description={t.hero.subheading ? `${t.hero.subheading} ${t.hero.intro}` : t.hero.intro}
+            primaryCta={{
+              label: lang === 'zh' ? '索取报价' : lang === 'ru' ? 'Запросить расчёт' : 'Request Quote',
+              href: getContactInquiryUrl(lang, 'ncr_forms', 'quote'),
+            }}
+            secondaryCta={{
+              label: lang === 'zh' ? '申请样品' : lang === 'ru' ? 'Запросить образцы' : 'Request Samples',
+              href: getContactInquiryUrl(lang, 'ncr_forms', 'sample'),
+            }}
             image={{ src: pageAssets.hero.src, alt: pageAssets.hero.alt }}
             overlay={pageAssets.hero.overlay}
             placeholderKey="ncr_forms_hero"
@@ -145,10 +153,10 @@ export const NCRFormsPage: React.FC<NCRFormsPageProps> = ({ lang = 'en', type })
                     ))}
                   </ul>
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Link to={type.ctaLink} className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 hover:scale-105 transition-all">
+                    <Link to={getContactInquiryUrl(lang, 'ncr_forms', 'sample')} className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 hover:scale-105 transition-all">
                       {type.cta} <ArrowRight size={20} />
                     </Link>
-                    <Link to={getContactInquiryUrl(lang, 'ncr_forms')} className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all">
+                    <Link to={getContactInquiryUrl(lang, 'ncr_forms', 'quote')} className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-all">
                       {lang === 'zh' ? '快速询价' : lang === 'ru' ? 'Быстрый запрос' : 'Quick Quote'}
                     </Link>
                   </div>
@@ -218,7 +226,14 @@ export const NCRFormsPage: React.FC<NCRFormsPageProps> = ({ lang = 'en', type })
         </section>
 
         {/* 08: CTA Block */}
-        <ProductPageCta lang={lang} />
+        <ProductPageCta
+          lang={lang}
+          headline={t.ctaBlock.headline}
+          subtext={t.ctaBlock.subtext}
+          primaryButton={lang === 'zh' ? '索取报价' : lang === 'ru' ? 'Запросить расчёт' : 'Request Quote'}
+          primaryLink={getContactInquiryUrl(lang, 'ncr_forms', 'quote')}
+          secondaryLink={getContactInquiryUrl(lang, 'ncr_forms', 'sample')}
+        />
       </main>
       
       <Footer />

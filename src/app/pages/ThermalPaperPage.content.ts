@@ -53,9 +53,9 @@ export interface ThermalPaperContent {
 export const content: Record<Lang, ThermalPaperContent> = {
   en: {
     hero: {
-      h1: 'Blank & Printed Thermal Paper Rolls for Stable POS Receipts',
-      subheading: 'Blank and pre-printed rolls from our own factory, engineered for stable POS and retail receipt printing.',
-      intro: 'We produce blank and pre-printed thermal paper rolls in-house, supporting distributors, retail chains, and project buyers with stable supply, common POS sizes, and OEM customization.'
+      h1: 'Thermal Paper Rolls for Repeat POS Supply and Project Procurement',
+      subheading: 'Blank and printed thermal paper rolls produced in-house for retail chains, distributors, and contract buyers.',
+      intro: 'We supply thermal paper rolls with stable coating, clean converting, and flexible OEM options for long-term replenishment, retail programs, and project-based orders.'
     },
     overview: {
       paragraph: 'Thermal paper rolls are widely used for receipt printing in retail, service, and automated transaction systems. Our production focuses on stable coating, clean cutting, and consistent performance across batches.',
@@ -82,24 +82,24 @@ export const content: Record<Lang, ThermalPaperContent> = {
           title: 'Blank Thermal Paper Rolls',
           shortDesc: 'Standard thermal paper rolls for distributors and regular supply.',
           bullets: ['Compatible with common POS printers', 'Consistent quality across batches', 'Flexible sizing options'],
-          cta: 'Request Info',
-          ctaLink: '/en/contact'
+          cta: 'Request Samples',
+          ctaLink: '/en/contact?intent=sample&inquiry=thermal_paper_rolls'
         },
         {
           id: 'printed',
           title: 'Printed Thermal Paper Rolls',
           shortDesc: 'Custom printed thermal rolls for branding and project use.',
           bullets: ['Logo and layout printing', 'Suitable for retail chains and projects', 'Stable print registration'],
-          cta: 'Request Info',
-          ctaLink: '/en/contact'
+          cta: 'Request Samples',
+          ctaLink: '/en/contact?intent=sample&inquiry=thermal_paper_rolls'
         },
         {
           id: 'supply',
           title: 'Supply Options',
           shortDesc: 'Flexible supply models for different purchasing needs.',
           bullets: ['Regular and contract-based supply', 'Stable lead time planning', 'Export packaging support'],
-          cta: 'Request Info',
-          ctaLink: '/en/contact'
+          cta: 'Request Samples',
+          ctaLink: '/en/contact?intent=sample&inquiry=thermal_paper_rolls'
         }
       ]
     },
@@ -140,10 +140,10 @@ export const content: Record<Lang, ThermalPaperContent> = {
       ]
     },
     ctaBlock: {
-      headline: 'Looking for a reliable thermal paper roll supplier?',
-      subtext: 'Contact our team for specifications, samples, and project support.',
+      headline: 'Need pricing or samples for your thermal paper program?',
+      subtext: 'Send us your size, quantity, and destination market. We can support repeat supply, OEM printing, and procurement review.',
       button: 'Request a Quote',
-      buttonLink: '/en/contact'
+      buttonLink: '/en/contact?intent=quote&inquiry=thermal_paper_rolls'
     },
     seo: {
       title: 'Thermal Paper Rolls Manufacturer | POS & ATM Receipt Paper | Zhixin',
@@ -154,9 +154,9 @@ export const content: Record<Lang, ThermalPaperContent> = {
 
   ru: {
     hero: {
-      h1: 'Термобумага в рулонах',
-      subheading: 'Термобумага собственного производства для стабильной POS-печати',
-      intro: 'Мы производим термобумагу в рулонах на собственном заводе, поставляя пустые и печатные рулоны для розницы, POS-систем и проектных заказов.'
+      h1: 'Термобумага в рулонах для регулярных поставок и проектных закупок',
+      subheading: 'Пустые и печатные рулоны собственного производства для ритейла, дистрибьюторов и контрактных закупок.',
+      intro: 'Мы поставляем термобумагу с контролируемым покрытием, аккуратной намоткой и гибкими OEM-опциями для повторных заказов, сетевой розницы и проектов.'
     },
     overview: {
       paragraph: 'Термобумага в рулонах широко используется для печати чеков в розничной торговле, сервисе и автоматизированных системах. Мы делаем акцент на стабильное покрытие и одинаковое качество партий.',
@@ -183,24 +183,24 @@ export const content: Record<Lang, ThermalPaperContent> = {
           title: 'Пустые рулоны термобумаги',
           shortDesc: 'Стандартные рулоны термобумаги для дистрибьюторов и регулярных поставок.',
           bullets: ['Совместимы с большинством POS-принтеров', 'Стабильное качество партий', 'Гибкие размеры под заказ'],
-          cta: 'Запросить информацию',
-          ctaLink: '/ru/contact'
+          cta: 'Запросить образцы',
+          ctaLink: '/ru/contact?intent=sample&inquiry=thermal_paper_rolls'
         },
         {
           id: 'printed',
           title: 'Печатные рулоны термобумаги',
           shortDesc: 'Термобумага с печатью для брендинга и проектных заказов.',
           bullets: ['Печать логотипов и макетов', 'Подходит для сетевой розницы и проектов', 'Стабильное совмещение печати'],
-          cta: 'Запросить информацию',
-          ctaLink: '/ru/contact'
+          cta: 'Запросить образцы',
+          ctaLink: '/ru/contact?intent=sample&inquiry=thermal_paper_rolls'
         },
         {
           id: 'supply',
           title: 'Варианты поставки',
           shortDesc: 'Гибкие модели поставок под разные потребности клиентов.',
           bullets: ['Регулярные и контрактные поставки', 'Планируемые сроки производства', 'Экспортная упаковка'],
-          cta: 'Запросить информацию',
-          ctaLink: '/ru/contact'
+          cta: 'Запросить образцы',
+          ctaLink: '/ru/contact?intent=sample&inquiry=thermal_paper_rolls'
         }
       ]
     },
@@ -241,10 +241,10 @@ export const content: Record<Lang, ThermalPaperContent> = {
       ]
     },
     ctaBlock: {
-      headline: 'Ищете надежного поставщика термобумаги?',
-      subtext: 'Свяжитесь с нами для получения спецификаций, образцов и проектной поддержки.',
+      headline: 'Нужны цены или образцы по программе закупки термобумаги?',
+      subtext: 'Отправьте размер, объём и рынок поставки. Мы поддержим повторные поставки, OEM-печать и закупочное согласование.',
       button: 'Запросить расчет',
-      buttonLink: '/ru/contact'
+      buttonLink: '/ru/contact?intent=quote&inquiry=thermal_paper_rolls'
     },
     seo: {
       title: 'Термобумага в рулонах — Производитель | POS и чековая печать | Zhixin',
@@ -255,9 +255,9 @@ export const content: Record<Lang, ThermalPaperContent> = {
 
   zh: {
     hero: {
-      h1: '空白与印刷热敏纸卷 · 工厂自产 · 打印稳定',
-      subheading: '适用于 POS 收银、小票和项目采购的热敏纸卷，兼顾空白卷与印刷卷需求。',
-      intro: '热敏纸卷由自有工厂生产，提供空白卷与印刷卷，覆盖常见 POS 规格，支持长期供货和 OEM 定制，服务分销商、零售连锁和项目客户。'
+      h1: '适合长期补货与项目采购的热敏纸卷',
+      subheading: '空白卷与印刷卷均由自有工厂生产，适用于零售连锁、分销商和合同采购。',
+      intro: '我们提供涂层稳定、分切整齐、支持 OEM 的热敏纸卷方案，适合持续补货、连锁零售和项目型订单。'
     },
     overview: {
       paragraph: '热敏纸卷广泛应用于零售、服务和自动交易系统的收据打印。我们的生产专注于稳定涂层、清洁切割和批次间的一致性能。',
@@ -284,24 +284,24 @@ export const content: Record<Lang, ThermalPaperContent> = {
           title: '空白热敏纸卷',
           shortDesc: '适用于分销商和常规供应的标准热敏纸卷。',
           bullets: ['兼容常见POS打印机', '批次间质量一致', '灵活的尺寸选项'],
-          cta: '索取信息',
-          ctaLink: '/zh/contact'
+          cta: '申请样品',
+          ctaLink: '/zh/contact?intent=sample&inquiry=thermal_paper_rolls'
         },
         {
           id: 'printed',
           title: '印刷热敏纸卷',
           shortDesc: '用于品牌和项目的定制印刷热敏卷。',
           bullets: ['标识和版式印刷', '适合连锁零售和项目', '稳定的印刷套准'],
-          cta: '索取信息',
-          ctaLink: '/zh/contact'
+          cta: '申请样品',
+          ctaLink: '/zh/contact?intent=sample&inquiry=thermal_paper_rolls'
         },
         {
           id: 'supply',
           title: '供应选项',
           shortDesc: '针对不同采购需求的灵活供应模式。',
           bullets: ['常规和基于合同的供应', '稳定的交期规划', '出口包装支持'],
-          cta: '索取信息',
-          ctaLink: '/zh/contact'
+          cta: '申请样品',
+          ctaLink: '/zh/contact?intent=sample&inquiry=thermal_paper_rolls'
         }
       ]
     },
@@ -342,10 +342,10 @@ export const content: Record<Lang, ThermalPaperContent> = {
       ]
     },
     ctaBlock: {
-      headline: '寻找可靠的热敏纸卷供应商？',
-      subtext: '联系我们的团队获取规格、样品和项目支持。',
+      headline: '如果你正在采购热敏纸卷的报价或样品',
+      subtext: '告诉我们规格、数量区间和目的市场，我们可以支持长期供货、OEM 印刷和采购审核。',
       button: '索取报价',
-      buttonLink: '/zh/contact'
+      buttonLink: '/zh/contact?intent=quote&inquiry=thermal_paper_rolls'
     },
     seo: {
       title: '热敏纸卷生产厂家 | POS与ATM收据纸 | 志信纸业',

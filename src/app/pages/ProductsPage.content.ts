@@ -50,9 +50,9 @@ export const content: Record<Lang, ProductsContent> = {
       keywords: 'thermal paper manufacturer, thermal labels, NCR forms, POS paper, receipt paper, OEM thermal paper',
     },
     hero: {
-      h1: 'Thermal Paper & Label Products',
-      subheading: 'Stable quality for global business',
-      intro: 'Factory-manufactured finished products with customization capabilities.',
+      h1: 'Choose the Right Thermal Product for Your Buying Program',
+      subheading: 'Factory-direct thermal paper, labels, and NCR forms for repeat supply and project procurement.',
+      intro: 'Compare the three core product lines by buying scenario, output stability, and customization requirement before requesting pricing or samples.',
     },
     categories: [
       { id: 'thermal-paper-rolls', title: 'Thermal Paper Rolls', shortDesc: 'For POS, ATM, and receipt printing', bullets: ['Stable image density', 'BPA-free options available', 'Custom sizes supported'], cta: 'View Category', link: '/en/thermal-paper-rolls' },
@@ -89,10 +89,10 @@ export const content: Record<Lang, ProductsContent> = {
       ctaLink: '/en/applications',
     },
     ctaBlock: {
-      headline: 'Need detailed specs or samples?',
-      subtext: 'Request datasheets, samples, and pricing from our team.',
+      headline: 'Need pricing or samples before choosing a product line?',
+      subtext: 'Tell us your use case, order size, and destination market. We will guide you to the right product and prepare pricing or samples.',
       button: 'Request a Quote',
-      buttonLink: '/en/contact',
+      buttonLink: '/en/contact?intent=quote',
     },
   },
 
@@ -103,9 +103,9 @@ export const content: Record<Lang, ProductsContent> = {
       keywords: 'производитель термобумаги, термоэтикетки, NCR формы, POS бумага, чековая бумага, OEM термобумага',
     },
     hero: {
-      h1: 'Термобумага и термоэтикетки',
-      subheading: 'Стабильное качество для международного бизнеса',
-      intro: 'Готовая продукция собственного производства с возможностью кастомизации.',
+      h1: 'Выберите нужную термопродукцию под ваш формат закупки',
+      subheading: 'Термобумага, термоэтикетки и NCR-формы напрямую с завода для регулярных поставок и проектов.',
+      intro: 'Сравните три основные продуктовые линии по сценарию применения, стабильности поставок и возможностям кастомизации перед запросом цены или образцов.',
     },
     categories: [
       { id: 'thermal-paper-rolls', title: 'Термобумага в рулонах', shortDesc: 'Для POS, банкоматов и чековой печати', bullets: ['Стабильная плотность печати', 'Возможны варианты без BPA', 'Индивидуальные размеры'], cta: 'Смотреть категорию', link: '/ru/thermal-paper-rolls' },
@@ -142,10 +142,10 @@ export const content: Record<Lang, ProductsContent> = {
       ctaLink: '/ru/applications',
     },
     ctaBlock: {
-      headline: 'Нужны технические характеристики или образцы?',
-      subtext: 'Запросите спецификации, образцы и цены у нашей команды.',
+      headline: 'Нужны цены или образцы до выбора продуктовой линии?',
+      subtext: 'Сообщите сценарий применения, объём и рынок поставки. Мы подскажем подходящий продукт и подготовим расчёт или образцы.',
       button: 'Запросить расчет',
-      buttonLink: '/ru/contact',
+      buttonLink: '/ru/contact?intent=quote',
     },
   },
 
@@ -156,9 +156,9 @@ export const content: Record<Lang, ProductsContent> = {
       keywords: '热敏纸厂家, 热敏标签, NCR表格, POS纸, 收据纸, OEM热敏纸',
     },
     hero: {
-      h1: '热敏纸卷与标签产品',
-      subheading: '为全球业务提供稳定质量',
-      intro: '工厂自产成品，支持定制化生产。',
+      h1: '按你的采购计划选择合适的热敏产品线',
+      subheading: '热敏纸卷、热敏标签和 NCR 表格工厂直供，适用于长期补货和项目采购。',
+      intro: '先按业务场景、稳定供货能力和定制需求对比三条主产品线，再决定报价或样品申请。',
     },
     categories: [
       { id: 'thermal-paper-rolls', title: '热敏纸卷', shortDesc: '适用于POS、ATM和收据打印', bullets: ['稳定的图像密度', '可提供无BPA选项', '支持定制尺寸'], cta: '查看分类', link: '/zh/thermal-paper-rolls' },
@@ -195,10 +195,10 @@ export const content: Record<Lang, ProductsContent> = {
       ctaLink: '/zh/applications',
     },
     ctaBlock: {
-      headline: '需要详细规格或样品？',
-      subtext: '向我们的团队索取数据表、样品和报价。',
+      headline: '在确定产品线前需要报价或样品？',
+      subtext: '告诉我们应用场景、采购量级和目标市场，我们会帮你匹配合适产品并准备报价或样品。',
       button: '索取报价',
-      buttonLink: '/zh/contact',
+      buttonLink: '/zh/contact?intent=quote',
     },
   },
 };

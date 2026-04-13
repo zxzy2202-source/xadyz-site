@@ -43,6 +43,14 @@ export interface ApplicationItem {
   link: string;
 }
 
+export interface DecisionPathItem {
+  id: string;
+  title: string;
+  desc: string;
+  cta: string;
+  link: string;
+}
+
 export interface LandingContent {
   seo: {
     title: string;
@@ -101,6 +109,11 @@ export interface LandingContent {
     cta: string;
     ctaLink: string;
   };
+  decisionPaths: {
+    sectionTitle: string;
+    intro: string;
+    items: DecisionPathItem[];
+  };
   ctaBlock: {
     headline: string;
     subtext: string;
@@ -120,65 +133,65 @@ export const content: Record<Lang, LandingContent> = {
     },
 
     hero: {
-      eyebrow: 'Thermal Paper & Label Manufacturer',
-      h1: 'FSC-Certified Thermal Paper & Labels. Factory Direct. Your Supply Chain Never Breaks.',
-      subheading: '30 tons daily printing · 200,000 rolls daily · 65-person team',
+      eyebrow: 'Factory-Direct Thermal Paper Supply',
+      h1: 'Factory-Direct Thermal Paper & Labels for Reliable B2B Supply',
+      subheading: '15+ years · 30 tons daily printing · 200,000 rolls per day',
       intro:
-        'In-house manufacturing for thermal rolls, labels, and NCR forms. Long-term supply, OEM customization, and project procurement for wholesalers, retailers, and brand owners.',
-      primaryCTA: 'View Products',
-      primaryCTALink: '/en/products',
-      secondaryCTA: 'Request Free Sample Kit',
-      secondaryCTALink: '/en/contact',
+        'Thermal paper rolls, thermal labels, and NCR forms for wholesalers, retail chains, project buyers, and brand owners. OEM support, export-ready packaging, and stable long-term supply.',
+      primaryCTA: 'Request a Quote',
+      primaryCTALink: '/en/contact?intent=quote',
+      secondaryCTA: 'Get Free Samples',
+      secondaryCTALink: '/en/contact?intent=sample',
     },
 
     statistics: {
       items: [
-        { value: '65', label: 'Total Staff', icon: 'users' },
+        { value: '15+', label: 'Years in Manufacturing', icon: 'users' },
         { value: '30 Tons', label: 'Daily Printing', icon: 'factory' },
-        { value: '200,000', label: 'Rolls Daily Slitting', icon: 'package' },
-        { value: '10', label: 'International Sales Experts', icon: 'globe' },
+        { value: '200,000', label: 'Rolls per Day', icon: 'package' },
+        { value: 'OEM / Tender', label: 'Project Support', icon: 'globe' },
       ],
     },
 
     aboutSection: {
-      sectionTitle: 'Established Factory. Reliable Supply.',
+      sectionTitle: 'Real Factory Capacity, Not Just Catalog Claims',
       intro:
-        'Founded in 2009, Zhixin Paper operates a 5,000 m² facility with 65 dedicated staff. We manufacture thermal rolls, labels, and NCR forms entirely in-house — 15 slitting lines and 4 printing lines, no outsourcing, full traceability from raw material to shipment.',
+        'Founded in 2009, Zhixin Paper runs a 5,000 m² facility with in-house slitting, printing, quality control, and export packing. For procurement teams, this means clearer production visibility, more stable lead times, and fewer delivery surprises.',
     },
 
     productSeries: {
-      sectionTitle: 'Core Products',
+      sectionTitle: 'Choose the Product Line That Fits Your Buying Need',
       series: [
         {
           id: 'thermal-till',
           icon: 'receipt',
-          title: 'Thermal Till Rolls (POS)',
-          desc: 'For retail, receipts, and POS systems',
+          title: 'Thermal Paper Rolls',
+          desc: 'For POS receipts, ATM slips, supermarkets, and retail chains',
           link: '/en/thermal-paper-rolls',
-          cta: 'Learn More',
+          cta: 'View Product Details',
         },
         {
           id: 'shipping-labels',
           icon: 'tag',
-          title: 'Shipping Labels (Direct Thermal)',
-          desc: 'For logistics, DHL, DPD, and barcode tracking',
+          title: 'Thermal Labels',
+          desc: 'For shipping labels, warehousing, barcode printing, and logistics',
           link: '/en/thermal-labels',
-          cta: 'Learn More',
+          cta: 'View Product Details',
         },
         {
-          id: 'pre-printed',
+          id: 'ncr-forms',
           icon: 'file',
-          title: 'Pre-printed Advertising Rolls',
-          desc: 'Back-print coupons and brand marketing for supermarkets',
-          link: '/en/thermal-paper-rolls/printed',
-          cta: 'Learn More',
+          title: 'NCR Forms',
+          desc: 'For invoices, delivery notes, and multi-copy business forms',
+          link: '/en/ncr-forms',
+          cta: 'View Product Details',
         },
       ],
     },
 
     compliance: {
-      sectionTitle: 'Compliance & Certifications',
-      subtext: 'Meeting CIS market standards and international quality requirements',
+      sectionTitle: 'Trust Signals Procurement Teams Actually Check',
+      subtext: 'Compliance, testing, and documentation support for repeat orders and project review',
       cta: 'View All Certifications',
       ctaLink: '/en/manufacturing/certifications',
       badges: [
@@ -190,47 +203,47 @@ export const content: Record<Lang, LandingContent> = {
     },
 
     whyChooseUs: {
-      sectionTitle: 'Why Choose Us',
+      sectionTitle: 'Why Buyers Choose a Supplier That Can Deliver Repeatedly',
       strengths: [
         {
           icon: 'factory',
-          title: 'In-house manufacturing',
-          desc: 'Full control from raw material to finished product — no third-party dependency, faster lead times.',
+          title: 'Stable long-term supply capacity',
+          desc: 'Integrated production means better control over output, replenishment planning, and order continuity.',
         },
         {
           icon: 'shield',
-          title: 'Stable quality and batch consistency',
-          desc: 'Strict QC on every batch: roll weight, paper width, thermal sensitivity, and peel force tested.',
+          title: 'Consistent quality across batches',
+          desc: 'Thermal sensitivity, width, weight, and converting quality are checked to reduce downstream complaints.',
         },
         {
           icon: 'package',
-          title: 'OEM & customization support',
-          desc: 'Custom sizes, core diameters, back-print, and branded packaging tailored to your buyer requirements.',
+          title: 'OEM sizes, printing, and packaging',
+          desc: 'Custom dimensions, private label packaging, and printed roll options for wholesale and branded supply.',
         },
         {
           icon: 'globe',
-          title: 'Export and project experience',
-          desc: 'Serving CIS and Central Asian wholesalers since 2009, familiar with Russia/Kazakhstan import requirements and documentation.',
+          title: 'Export execution and project support',
+          desc: 'Suitable for distributor onboarding, procurement review, and tender-related document preparation.',
         },
       ],
     },
 
     manufacturingSnapshot: {
-      sectionTitle: 'Scalable Capacity: Your Supply Chain Never Breaks',
+      sectionTitle: 'What Keeps Your Orders Moving',
       intro:
-        '15 slitting machines and 4 printing lines running continuously. In-house QC lab, export-ready packaging, and flexible MOQ for project and repeat orders.',
+        'Production lines, QC workflow, warehouse handling, and container loading all affect delivery confidence. We show the operational side because B2B buyers need more than a catalog.',
       items: [
-        { icon: 'receipt', label: 'Thermal Paper Rolls', desc: '80 mm, 57 mm and custom widths for any POS terminal' },
-        { icon: 'tag', label: 'Thermal Labels', desc: 'Direct thermal for DHL, DPD, Amazon, and barcode printing' },
-        { icon: 'file', label: 'NCR Forms', desc: '2/3-ply carbonless for receipts, delivery notes, and tenders' },
-        { icon: 'factory', label: '30 tons daily capacity', desc: '15 slitting + 4 printing lines, scalable for large orders' },
+        { icon: 'factory', label: 'Production Lines', desc: '15 slitting lines and 4 printing lines for repeat supply and custom production' },
+        { icon: 'shield', label: 'Quality Control', desc: 'Checks before packing and shipment to keep batches stable' },
+        { icon: 'package', label: 'Warehouse & Packing', desc: 'Bulk order handling, pallet control, and export-ready packaging' },
+        { icon: 'globe', label: 'Container Loading', desc: 'Operational support for international delivery and project dispatch' },
       ],
-      cta: 'View Manufacturing',
+      cta: 'See Factory Capability',
       ctaLink: '/en/manufacturing',
     },
 
     applicationsTeaser: {
-      sectionTitle: 'Applications & Industries',
+      sectionTitle: 'Built for Real Business Use Cases',
       items: [
         { icon: 'store', title: 'Retail & POS', link: '/en/applications/retail-pos' },
         { icon: 'truck', title: 'Logistics & Warehousing', link: '/en/applications/logistics-warehousing' },
@@ -242,19 +255,47 @@ export const content: Record<Lang, LandingContent> = {
     },
 
     materialSupplyTeaser: {
-      sectionTitle: 'Material Supply',
+      sectionTitle: 'Need Raw Material Supply Too?',
       intro:
-        'In addition to finished products, we also supply thermal, self-adhesive, and NCR materials with stable sourcing.',
+        'Besides finished products, we also support thermal, self-adhesive, and NCR material supply for converters and trade customers.',
       cta: 'View Material Supply',
       ctaLink: '/en/material-supply',
+    },
+
+    decisionPaths: {
+      sectionTitle: 'Tell Us What Stage You Are In',
+      intro: 'Choose the fastest path for pricing, sample evaluation, or tender support.',
+      items: [
+        {
+          id: 'quote',
+          title: 'Need Pricing?',
+          desc: 'Best for buyers who already know product type, target quantity, or destination market.',
+          cta: 'Request a Quote',
+          link: '/en/contact?intent=quote',
+        },
+        {
+          id: 'sample',
+          title: 'Need Samples?',
+          desc: 'Best for checking print quality, material feel, label performance, or packaging fit.',
+          cta: 'Get Free Samples',
+          link: '/en/contact?intent=sample',
+        },
+        {
+          id: 'tender',
+          title: 'Need Tender Support?',
+          desc: 'Best for project procurement, distributor onboarding, or document review before approval.',
+          cta: 'Request Tender Support',
+          link: '/en/contact?intent=tender',
+        },
+      ],
     },
 
     ctaBlock: {
       headline: 'Request a Free Sample Kit',
       subtext:
-        'Professional inquiry response within 2 hours. Contact us for specifications, samples, and project support.',
+        'Professional inquiry response within 24 hours. Contact us for specifications, samples, and project support.',
       button: 'Send Inquiry',
-      buttonLink: '/en/contact',
+      buttonLink: '/en/contact?intent=quote',
     },
   },
 
@@ -268,65 +309,65 @@ export const content: Record<Lang, LandingContent> = {
     },
 
     hero: {
-      eyebrow: 'Производитель термобумаги и этикеток',
-      h1: 'Термобумага и этикетки с собственного завода. Прямые поставки. Стабильная логистика.',
-      subheading: '30 т печати в день · 200 000 рулонов · OEM и проектные закупки',
+      eyebrow: 'Прямые поставки термопродукции с завода',
+      h1: 'Термобумага и этикетки напрямую с завода для стабильных B2B-поставок',
+      subheading: '15+ лет · 30 т печати в день · 200 000 рулонов в день',
       intro:
-        'Готовая продукция: термобумага, термоэтикетки, NCR-формы. Долгосрочные контракты, кастомизация и поддержка оптовиков, ритейлеров и брендов.',
-      primaryCTA: 'Смотреть продукцию',
-      primaryCTALink: '/ru/products',
-      secondaryCTA: 'Запросить тендерный пакет',
-      secondaryCTALink: '/ru/request-tender-pack',
+        'Термобумага, термоэтикетки и NCR-формы для оптовиков, сетевой розницы, проектных закупок и брендов. OEM, экспортная упаковка и долгосрочные поставки.',
+      primaryCTA: 'Запросить расчёт',
+      primaryCTALink: '/ru/contact?intent=quote',
+      secondaryCTA: 'Получить образцы',
+      secondaryCTALink: '/ru/contact?intent=sample',
     },
 
     statistics: {
       items: [
-        { value: '65', label: 'Сотрудников всего', icon: 'users' },
+        { value: '15+', label: 'Лет производства', icon: 'users' },
         { value: '30 т', label: 'Печать в день', icon: 'factory' },
         { value: '200 000', label: 'Рулонов в день', icon: 'package' },
-        { value: '10', label: 'Международных экспертов', icon: 'globe' },
+        { value: 'OEM / Тендер', label: 'Поддержка проектов', icon: 'globe' },
       ],
     },
 
     aboutSection: {
-      sectionTitle: 'Собственный завод. Надёжные поставки.',
+      sectionTitle: 'Реальные производственные мощности, а не только каталог',
       intro:
-        'Основана в 2009 году, Zhixin Paper управляет заводом площадью 5 000 м² с 65 сотрудниками. Мы производим термобумагу, этикетки и NCR-формы на собственном оборудовании — 15 линий нарезки, 4 печатные линии, без аутсорсинга, с полной прослеживаемостью от сырья до отгрузки.',
+        'Zhixin Paper работает с 2009 года и управляет собственным производством площадью 5 000 м². Для закупщика это означает прозрачность по линиям, контролю качества, упаковке и отгрузке, а значит меньше рисков по срокам и качеству.',
     },
 
     productSeries: {
-      sectionTitle: 'Продукция нашего производства',
+      sectionTitle: 'Подберите продукт под ваш сценарий закупки',
       series: [
         {
           id: 'thermal-paper',
           icon: 'receipt',
           title: 'Термобумага в рулонах',
-          desc: 'Для POS, розницы и печати чеков',
+          desc: 'Для POS, чеков, банкоматов, супермаркетов и сетевой розницы',
           link: '/ru/thermal-paper-rolls',
-          cta: 'Подробнее',
+          cta: 'Подробнее о продукте',
         },
         {
           id: 'thermal-labels',
           icon: 'tag',
-          title: 'Термоэтикетки (рулоны)',
-          desc: 'Для логистики, доставки и штрихкодирования',
+          title: 'Термоэтикетки',
+          desc: 'Для логистики, складов, доставки и печати штрихкодов',
           link: '/ru/thermal-labels',
-          cta: 'Подробнее',
+          cta: 'Подробнее о продукте',
         },
         {
           id: 'ncr-forms',
           icon: 'file',
           title: 'NCR-формы',
-          desc: 'Для государственных, тендерных и финансовых документов',
+          desc: 'Для накладных, счетов, многоэкземплярных и бизнес-документов',
           link: '/ru/ncr-forms',
-          cta: 'Подробнее',
+          cta: 'Подробнее о продукте',
         },
       ],
     },
 
     compliance: {
-      sectionTitle: 'Сертификация и соответствие',
-      subtext: 'Соответствие международным стандартам',
+      sectionTitle: 'Что проверяют отделы закупок и качества',
+      subtext: 'Сертификация, тестирование и документальная готовность для повторных заказов и проектов',
       cta: 'Все сертификаты',
       ctaLink: '/ru/manufacturing/certifications',
       badges: [
@@ -338,47 +379,47 @@ export const content: Record<Lang, LandingContent> = {
     },
 
     whyChooseUs: {
-      sectionTitle: 'Почему выбирают нас',
+      sectionTitle: 'Почему закупщики выбирают поставщика, который умеет отгружать повторно',
       strengths: [
         {
           icon: 'factory',
-          title: 'Собственное производство',
-          desc: 'Полный контроль от сырья до готовой продукции — без привлечения третьих сторон, сокращённые сроки.',
+          title: 'Стабильные долгосрочные поставки',
+          desc: 'Собственное производство упрощает планирование пополнения и снижает зависимость от внешних подрядчиков.',
         },
         {
           icon: 'shield',
           title: 'Стабильное качество партий',
-          desc: 'Строгий контроль каждой партии: вес рулона, ширина бумаги, термочувствительность и усилие отрыва.',
+          desc: 'Контроль чувствительности, ширины, веса и конвертинга помогает снизить претензии по повторным закупкам.',
         },
         {
           icon: 'package',
-          title: 'OEM и кастомизация',
-          desc: 'Индивидуальные размеры, диаметры втулок, задняя печать и фирменная упаковка под ваши требования.',
+          title: 'OEM, размеры и упаковка под клиента',
+          desc: 'Индивидуальные размеры, частная марка, брендированная упаковка и печать под оптовые и проектные поставки.',
         },
         {
           icon: 'globe',
-          title: 'Опыт экспортных и проектных поставок',
-          desc: 'Работаем с оптовиками России, Казахстана и стран СНГ с 2009 года, знаем требования к документации и логистике.',
+          title: 'Экспорт и проектная поддержка',
+          desc: 'Подходим для запуска дистрибьюции, закупочного согласования и тендерной документации.',
         },
       ],
     },
 
     manufacturingSnapshot: {
-      sectionTitle: 'Производственные возможности',
+      sectionTitle: 'Что реально держит ваши поставки в графике',
       intro:
-        '15 линий нарезки и 4 печатные линии работают непрерывно. Собственная лаборатория ОТК, экспортная упаковка и гибкий MOQ для проектных и повторных заказов.',
+        'Для B2B-заказчика важны не только товары, но и производственные линии, контроль качества, склад и отгрузка. Поэтому мы показываем операционную сторону производства, а не только карточки товара.',
       items: [
-        { icon: 'receipt', label: 'Термобумага в рулонах', desc: '80 мм, 57 мм и нестандартные ширины для любых POS-терминалов' },
-        { icon: 'tag', label: 'Термоэтикетки', desc: 'Прямая термопечать для DHL, DPD, Amazon и штрихкодирования' },
-        { icon: 'file', label: 'NCR-формы', desc: '2/3-слойные для чеков, накладных и тендерной документации' },
-        { icon: 'factory', label: '30 т печати в день', desc: '15 нарезных + 4 печатные линии, масштабируется под крупные заказы' },
+        { icon: 'factory', label: 'Производственные линии', desc: '15 линий нарезки и 4 линии печати для повторных и нестандартных заказов' },
+        { icon: 'shield', label: 'Контроль качества', desc: 'Проверки перед упаковкой и отгрузкой для стабильных партий' },
+        { icon: 'package', label: 'Склад и упаковка', desc: 'Работа с паллетами, упаковкой и подготовкой к экспорту' },
+        { icon: 'globe', label: 'Контейнерная отгрузка', desc: 'Поддержка международной логистики и проектных поставок' },
       ],
-      cta: 'Смотреть производство',
+      cta: 'Посмотреть возможности завода',
       ctaLink: '/ru/manufacturing',
     },
 
     applicationsTeaser: {
-      sectionTitle: 'Применение и отрасли',
+      sectionTitle: 'Под реальные бизнес-сценарии',
       items: [
         { icon: 'store', title: 'Ритейл и POS', link: '/ru/applications/retail-pos' },
         { icon: 'truck', title: 'Логистика и склад', link: '/ru/applications/logistics-warehousing' },
@@ -390,17 +431,45 @@ export const content: Record<Lang, LandingContent> = {
     },
 
     materialSupplyTeaser: {
-      sectionTitle: 'Поставка материалов',
-      intro: 'Помимо готовой продукции, мы также поставляем термобумагу, самоклеящиеся и NCR материалы.',
+      sectionTitle: 'Нужны ещё и сырьевые материалы?',
+      intro: 'Помимо готовой продукции, мы поставляем термобумагу, самоклеящиеся и NCR материалы для конвертеров и трейдеров.',
       cta: 'Смотреть материалы',
       ctaLink: '/ru/material-supply',
+    },
+
+    decisionPaths: {
+      sectionTitle: 'Скажите, на каком этапе закупки вы находитесь',
+      intro: 'Выберите быстрый путь для расчёта, образцов или тендерной поддержки.',
+      items: [
+        {
+          id: 'quote',
+          title: 'Нужен расчёт?',
+          desc: 'Для покупателей, у которых уже есть понимание продукта, объёма или рынка поставки.',
+          cta: 'Запросить расчёт',
+          link: '/ru/contact?intent=quote',
+        },
+        {
+          id: 'sample',
+          title: 'Нужны образцы?',
+          desc: 'Для проверки качества печати, материала, размера или упаковки перед заказом.',
+          cta: 'Получить образцы',
+          link: '/ru/contact?intent=sample',
+        },
+        {
+          id: 'tender',
+          title: 'Нужна тендерная поддержка?',
+          desc: 'Для проектных закупок, согласования поставщика или документальной проверки.',
+          cta: 'Запросить поддержку',
+          link: '/ru/contact?intent=tender',
+        },
+      ],
     },
 
     ctaBlock: {
       headline: 'Ищете надежного производственного партнера?',
       subtext: 'Свяжитесь с нами для получения спецификаций, образцов и проектной поддержки.',
       button: 'Связаться с нами',
-      buttonLink: '/ru/contact',
+      buttonLink: '/ru/contact?intent=quote',
     },
   },
 
@@ -412,64 +481,64 @@ export const content: Record<Lang, LandingContent> = {
     },
 
     hero: {
-      eyebrow: '热敏纸与标签制造商',
-      h1: '热敏纸与标签工厂直供 · 产能稳定 · 供应链可靠',
-      subheading: '日印刷 30 吨 · 日分切 20 万卷 · 自有工厂 · OEM 定制',
-      intro: '热敏纸卷、热敏标签、NCR 表格自有工厂生产。长期供应、项目采购，服务批发商、零售与品牌客户。',
-      primaryCTA: '查看产品',
-      primaryCTALink: '/zh/products',
-      secondaryCTA: '索取投标包',
-      secondaryCTALink: '/zh/request-tender-pack',
+      eyebrow: '热敏纸工厂直供',
+      h1: '热敏纸与标签工厂直供，稳定支持长期 B2B 采购',
+      subheading: '15+ 年生产经验 · 日印刷 30 吨 · 日产 20 万卷',
+      intro: '提供热敏纸卷、热敏标签、NCR 表格的规模化生产与定制服务，适用于批发、连锁零售、项目采购与品牌客户。',
+      primaryCTA: '立即获取报价',
+      primaryCTALink: '/zh/contact?intent=quote',
+      secondaryCTA: '申请免费样品',
+      secondaryCTALink: '/zh/contact?intent=sample',
     },
 
     statistics: {
       items: [
-        { value: '65', label: '全体员工', icon: 'users' },
+        { value: '15+', label: '年生产经验', icon: 'users' },
         { value: '30吨', label: '日印刷产能', icon: 'factory' },
-        { value: '20万', label: '日分切卷数', icon: 'package' },
-        { value: '10', label: '国际销售专员', icon: 'globe' },
+        { value: '20万', label: '日产卷数', icon: 'package' },
+        { value: 'OEM / 投标', label: '项目支持', icon: 'globe' },
       ],
     },
 
     aboutSection: {
-      sectionTitle: '自有工厂，稳定供应',
+      sectionTitle: '真实工厂能力，而不只是产品目录',
       intro:
-        '志信纸业成立于2009年，拥有5000平方米厂房和65名专职员工。15条分切线、4条印刷线全程在厂运营，热敏纸卷、热敏标签、NCR表格完全自主生产，不依赖外包，原料到出货全程可追溯。',
+        '志信纸业成立于2009年，拥有 5000 平方米厂房，自有分切、印刷、质检和出口包装流程。对采购方来说，这意味着更清晰的产线可见性、更稳定的交期，以及更低的履约风险。',
     },
 
     productSeries: {
-      sectionTitle: '我们的工厂制造产品',
+      sectionTitle: '按采购需求快速选择产品线',
       series: [
         {
           id: 'thermal-paper',
           icon: 'receipt',
           title: '热敏纸卷',
-          desc: '用于POS、零售和小票打印',
+          desc: '适用于 POS 小票、ATM 凭条、商超与连锁零售',
           link: '/zh/thermal-paper-rolls',
-          cta: '了解更多',
+          cta: '查看产品详情',
         },
         {
           id: 'thermal-labels',
           icon: 'tag',
-          title: '热敏标签（卷装）',
-          desc: '用于物流、快递和条码追踪',
+          title: '热敏标签',
+          desc: '适用于物流面单、仓储标签、条码打印与配送流程',
           link: '/zh/thermal-labels',
-          cta: '了解更多',
+          cta: '查看产品详情',
         },
         {
           id: 'ncr-forms',
           icon: 'file',
           title: 'NCR表格',
-          desc: '用于政府、投标和财务文档',
+          desc: '适用于送货单、票据、业务单据和多联表单',
           link: '/zh/ncr-forms',
-          cta: '了解更多',
+          cta: '查看产品详情',
         },
       ],
     },
 
     compliance: {
-      sectionTitle: '合规与认证',
-      subtext: '符合独联体市场标准及国际质量要求',
+      sectionTitle: '采购团队真正会检查的信任信号',
+      subtext: '认证、检测与文件配合能力，适用于重复采购和项目审查',
       cta: '查看全部认证',
       ctaLink: '/zh/manufacturing/certifications',
       badges: [
@@ -481,46 +550,46 @@ export const content: Record<Lang, LandingContent> = {
     },
 
     whyChooseUs: {
-      sectionTitle: '为什么选择我们',
+      sectionTitle: '为什么长期采购客户更看重稳定交付能力',
       strengths: [
         {
           icon: 'factory',
-          title: '自有工厂生产',
-          desc: '从原材料到成品全程自主控制，不依赖第三方，交期更快。',
+          title: '长期稳定供货',
+          desc: '自有生产让补货计划更可控，也减少了对外部代工的依赖。',
         },
         {
           icon: 'shield',
-          title: '稳定的质量和批次一致性',
-          desc: '每批次严格检测：卷重、纸宽、热敏灵敏度和剥离力，确保批批一致。',
+          title: '批次质量更稳定',
+          desc: '对热敏灵敏度、纸宽、卷重和加工质量进行检查，降低重复采购投诉风险。',
         },
         {
           icon: 'package',
-          title: 'OEM与定制支持',
-          desc: '可定制尺寸、纸芯直径、背面印刷和品牌包装，满足您的买家要求。',
+          title: '支持 OEM、规格和包装定制',
+          desc: '支持尺寸、印刷、品牌包装和私标需求，适合批发与项目订单。',
         },
         {
           icon: 'globe',
-          title: '出口和项目经验',
-          desc: '自2009年起服务俄罗斯、哈萨克斯坦及独联体批发商，熟悉进口要求和文件规范。',
+          title: '支持出口与项目资料',
+          desc: '适用于供应商审核、项目采购、招投标资料准备和渠道合作。',
         },
       ],
     },
 
     manufacturingSnapshot: {
-      sectionTitle: '生产能力：供应链从不断链',
-      intro: '15条分切线和4条印刷线持续运转，自有品质实验室，出口包装就绪，项目与返单均支持灵活MOQ。',
+      sectionTitle: '真正决定交付稳定性的环节',
+      intro: '对 B2B 客户来说，除了产品本身，更重要的是生产线、质检、仓储和装柜执行能力。这些决定了交付是否稳定。',
       items: [
-        { icon: 'receipt', label: '热敏纸卷', desc: '80mm、57mm及定制宽度，适配各类POS终端' },
-        { icon: 'tag', label: '直接热敏标签', desc: '适用于DHL、顺丰、Amazon和条码打印' },
-        { icon: 'file', label: 'NCR 表格', desc: '二/三联无碳复写，适用于收据、送货单和投标文件' },
-        { icon: 'factory', label: '日产能 30 吨', desc: '15分切 + 4印刷线，可承接大宗订单' },
+        { icon: 'factory', label: '生产线', desc: '15 条分切线和 4 条印刷线支持返单与定制订单并行' },
+        { icon: 'shield', label: '质检流程', desc: '包装和出货前的关键检查，保证批次稳定' },
+        { icon: 'package', label: '仓储与包装', desc: '适合大货管理、托盘控制和出口包装' },
+        { icon: 'globe', label: '装柜发运', desc: '支持国际运输和项目型发货安排' },
       ],
-      cta: '查看生产',
+      cta: '查看工厂能力',
       ctaLink: '/zh/manufacturing',
     },
 
     applicationsTeaser: {
-      sectionTitle: '应用与行业',
+      sectionTitle: '围绕真实业务场景设计',
       items: [
         { icon: 'store', title: '零售与POS', link: '/zh/applications/retail-pos' },
         { icon: 'truck', title: '物流与仓储', link: '/zh/applications/logistics-warehousing' },
@@ -532,17 +601,45 @@ export const content: Record<Lang, LandingContent> = {
     },
 
     materialSupplyTeaser: {
-      sectionTitle: '原材料供应',
-      intro: '除成品外，我们还提供稳定采购的热敏、自粘和NCR材料。',
+      sectionTitle: '如果你还需要原材料供应',
+      intro: '除成品外，我们也支持热敏、自粘和 NCR 原材料供货，适合加工厂和贸易客户。',
       cta: '查看原材料供应',
       ctaLink: '/zh/material-supply',
+    },
+
+    decisionPaths: {
+      sectionTitle: '告诉我们你现在处于哪个采购阶段',
+      intro: '根据你的采购目标，选择最快的沟通入口。',
+      items: [
+        {
+          id: 'quote',
+          title: '我需要报价',
+          desc: '适合已经有产品方向、数量区间或目标市场的采购客户。',
+          cta: '立即获取报价',
+          link: '/zh/contact?intent=quote',
+        },
+        {
+          id: 'sample',
+          title: '我需要样品',
+          desc: '适合先测试纸张、标签、印刷效果或包装适配性的客户。',
+          cta: '申请免费样品',
+          link: '/zh/contact?intent=sample',
+        },
+        {
+          id: 'tender',
+          title: '我需要项目资料',
+          desc: '适合投标、项目采购、渠道审核或供应商评估。',
+          cta: '获取项目支持',
+          link: '/zh/contact?intent=tender',
+        },
+      ],
     },
 
     ctaBlock: {
       headline: '寻找可靠的制造合作伙伴？',
       subtext: '联系我们获取规格、样品和项目支持。',
       button: '联系我们',
-      buttonLink: '/zh/contact',
+      buttonLink: '/zh/contact?intent=quote',
     },
   },
 };

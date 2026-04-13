@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { Header } from '@/app/components/Header';
 import { FooterOptimized as Footer } from '@/app/components/FooterOptimized';
 import { SEO } from '@/app/components/SEO';
@@ -8,7 +9,6 @@ import {
   ComplianceBadges,
   ManufacturingSnapshot,
   MaterialSupplyTeaser,
-  ProductPageCta,
 } from '@/app/components/landing';
 import { ImagePlaceholder } from '@/app/components/ImagePlaceholder';
 import { PageHero } from '@/app/components/hero/PageHero';
@@ -124,6 +124,31 @@ export const LandingPage: React.FC<LandingPageProps> = ({ lang = 'en' }) => {
           </div>
         </div>
 
+        <StatsBar items={t.statistics?.items ?? []} />
+
+        <SectionCardGrid
+          sectionTitle={t.productSeries.sectionTitle}
+          items={t.productSeries.series}
+          variant="product"
+          background="gray"
+        />
+
+        <SectionCardGrid
+          sectionTitle={t.whyChooseUs.sectionTitle}
+          items={t.whyChooseUs.strengths}
+          variant="strength"
+          background="white"
+        />
+
+        <SectionCardGrid
+          sectionTitle={t.applicationsTeaser.sectionTitle}
+          items={t.applicationsTeaser.items}
+          cta={t.applicationsTeaser.cta}
+          ctaLink={t.applicationsTeaser.ctaLink}
+          variant="app"
+          background="white"
+        />
+
         {/* 工厂简介：图文两栏（独立于 ManufacturingSnapshot 列表区块） */}
         <section className="mt-12 mb-20">
           <div className="max-w-6xl mx-auto px-4 grid gap-10 md:grid-cols-2 items-center">
@@ -145,15 +170,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({ lang = 'en' }) => {
           </div>
         </section>
 
-        <StatsBar items={t.statistics?.items ?? []} />
-
-        <SectionCardGrid
-          sectionTitle={t.productSeries.sectionTitle}
-          items={t.productSeries.series}
-          variant="product"
-          background="gray"
-        />
-
         {t.compliance && (
           <ComplianceBadges
             sectionTitle={t.compliance.sectionTitle}
@@ -164,28 +180,12 @@ export const LandingPage: React.FC<LandingPageProps> = ({ lang = 'en' }) => {
           />
         )}
 
-        <SectionCardGrid
-          sectionTitle={t.whyChooseUs.sectionTitle}
-          items={t.whyChooseUs.strengths}
-          variant="strength"
-          background="white"
-        />
-
         <ManufacturingSnapshot
           sectionTitle={t.manufacturingSnapshot.sectionTitle}
           intro={t.manufacturingSnapshot.intro}
           items={t.manufacturingSnapshot.items}
           cta={t.manufacturingSnapshot.cta}
           ctaLink={t.manufacturingSnapshot.ctaLink}
-        />
-
-        <SectionCardGrid
-          sectionTitle={t.applicationsTeaser.sectionTitle}
-          items={t.applicationsTeaser.items}
-          cta={t.applicationsTeaser.cta}
-          ctaLink={t.applicationsTeaser.ctaLink}
-          variant="app"
-          background="white"
         />
 
         <MaterialSupplyTeaser
@@ -195,7 +195,33 @@ export const LandingPage: React.FC<LandingPageProps> = ({ lang = 'en' }) => {
           ctaLink={t.materialSupplyTeaser.ctaLink}
         />
 
-        <ProductPageCta lang={lang} />
+        <section className="max-w-7xl mx-auto px-4 py-8">
+          <div className="mb-10 text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              {t.decisionPaths.sectionTitle}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {t.decisionPaths.intro}
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {t.decisionPaths.items.map((item) => (
+              <div
+                key={item.id}
+                className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl"
+              >
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600 mb-8 min-h-[96px]">{item.desc}</p>
+                <Link
+                  to={item.link}
+                  className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700"
+                >
+                  {item.cta}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
 
       <Footer />

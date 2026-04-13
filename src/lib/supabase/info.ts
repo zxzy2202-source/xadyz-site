@@ -18,13 +18,20 @@ const viteEnv: MaybeEnv =
     ? (import.meta as any).env
     : undefined;
 
+const nodeEnv =
+  typeof process !== "undefined" && process.env
+    ? process.env
+    : undefined;
+
 const projectIdFromEnv =
-  viteEnv?.VITE_SUPABASE_PROJECT_ID ?? process.env.VITE_SUPABASE_PROJECT_ID;
+  viteEnv?.VITE_SUPABASE_PROJECT_ID ?? nodeEnv?.VITE_SUPABASE_PROJECT_ID;
 const anonKeyFromEnv =
-  viteEnv?.VITE_SUPABASE_ANON_KEY ?? process.env.VITE_SUPABASE_ANON_KEY;
+  viteEnv?.VITE_SUPABASE_ANON_KEY ?? nodeEnv?.VITE_SUPABASE_ANON_KEY;
 
 // 为了避免阻塞前台渲染，如果没有配置，就使用占位符。
 // Admin 功能在未配置真实 key 时将无法正常工作，需要在部署环境中补齐变量。
 export const projectId = projectIdFromEnv || "your-supabase-project-id";
 export const publicAnonKey = anonKeyFromEnv || "your-public-anon-key";
-
+export const hasSupabaseConfig =
+  projectId !== "your-supabase-project-id" &&
+  publicAnonKey !== "your-public-anon-key";

@@ -85,7 +85,14 @@ export function getLeadTypeLabel(
 /** 带产品预填的联系页 URL（用于快速询价） */
 export function getContactInquiryUrl(
   lang: 'zh' | 'en' | 'ru',
-  productKey: ProductInterestKey
+  productKey: ProductInterestKey,
+  intent?: 'quote' | 'sample' | 'tender' | 'contact'
 ): string {
-  return `/${lang}/contact?inquiry=${encodeURIComponent(productKey)}`;
+  const params = new URLSearchParams({
+    inquiry: productKey,
+  });
+  if (intent) {
+    params.set('intent', intent);
+  }
+  return `/${lang}/contact?${params.toString()}`;
 }

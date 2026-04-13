@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSearchParams } from 'react-router';
 import { Header } from '@/app/components/Header';
 import { Breadcrumb } from '@/app/components/Breadcrumb';
 import { FooterOptimized as Footer } from '@/app/components/FooterOptimized';
@@ -62,6 +63,7 @@ interface RequestTenderPackPageProps {
 
 export const RequestTenderPackPage: React.FC<RequestTenderPackPageProps> = ({ lang }) => {
   const t = content[lang];
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = React.useState({
     companyName: '',
     contactPerson: '',
@@ -75,6 +77,26 @@ export const RequestTenderPackPage: React.FC<RequestTenderPackPageProps> = ({ la
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitted, setSubmitted] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    const inquiry = searchParams.get('inquiry');
+    const products = searchParams.get('products');
+    const keys: string[] = [];
+    if (inquiry && PRODUCT_KEYS.includes(inquiry as typeof PRODUCT_KEYS[number])) {
+      keys.push(inquiry);
+    }
+    if (products) {
+      products.split(',').forEach((k) => {
+        const key = k.trim();
+        if (PRODUCT_KEYS.includes(key as typeof PRODUCT_KEYS[number])) {
+          keys.push(key);
+        }
+      });
+    }
+    if (keys.length > 0) {
+      setFormData((prev) => ({ ...prev, productsInterest: [...new Set(keys)] }));
+    }
+  }, [searchParams]);
 
   const toggleProduct = (key: string) => {
     setFormData((prev) => ({
@@ -96,7 +118,12 @@ export const RequestTenderPackPage: React.FC<RequestTenderPackPageProps> = ({ la
     setIsSubmitting(true);
     setError(null);
     try {
-      const notes = [formData.projectType, formData.additionalInfo].filter(Boolean).join('\n\n');
+      const notes = [
+        `${t.projectType}: ${formData.projectType}`,
+        formData.additionalInfo.trim(),
+      ]
+        .filter(Boolean)
+        .join('\n\n');
       const productsInterested = formData.productsInterest.length > 0 ? formData.productsInterest : null;
       const productInterest = productsInterested
         ? productsInterested.map((k) => getProductLabel(k, lang)).join(', ')
@@ -250,8 +277,10 @@ export const RequestTenderPackPage: React.FC<RequestTenderPackPageProps> = ({ la
                 <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-6">
                   <CheckCircle2 size={40} className="text-emerald-600" />
                 </div>
-                <h3 className="text-2xl font-black text-gray-900 mb-3">{t.successMsg.split('!')[0]}!</h3>
-                <p className="text-gray-500 mb-8">{t.successMsg.includes('!') ? t.successMsg.split('!').slice(1).join('!').trim() : ''}</p>
+                <h3 className="text-2xl font-black text-gray-900 mb-3">
+                  {lang === 'zh' ? '申请已提交' : lang === 'ru' ? 'Запрос отправлен' : 'Request Submitted'}
+                </h3>
+                <p className="text-gray-500 mb-8">{t.successMsg}</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl transition-colors">

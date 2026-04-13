@@ -23,9 +23,9 @@ export interface NCRFormsContent {
 export const content: Record<Lang, NCRFormsContent> = {
   en: {
     hero: {
-      h1: 'NCR Forms (Carbonless Forms)',
-      subheading: 'In-house manufactured carbonless forms for documentation and projects',
-      intro: 'We manufacture NCR forms on dedicated converting and printing lines, supplying blank, printed, and continuous forms for business, finance, and government project requirements.'
+      h1: 'NCR Forms for Business Documentation and Institutional Procurement',
+      subheading: 'In-house manufactured carbonless forms for invoices, delivery notes, and multi-copy project workflows.',
+      intro: 'We supply blank, printed, and continuous NCR forms for distributors, finance workflows, logistics documentation, and institutional buyers that need stable copy quality and repeat delivery.'
     },
     overview: {
       paragraph: 'NCR forms are multi-part carbonless documents used for invoices, delivery notes, and official records. Our production focuses on clean image transfer, accurate registration, and stable paper feeding across different formats.',
@@ -52,24 +52,24 @@ export const content: Record<Lang, NCRFormsContent> = {
           title: 'Blank NCR Forms',
           shortDesc: 'Standard carbonless forms for general documentation and distribution.',
           bullets: ['Multiple ply options available', 'Clean and consistent image transfer', 'Smooth feeding performance'],
-          cta: 'Request Info',
-          ctaLink: '/en/contact'
+          cta: 'Request Samples',
+          ctaLink: '/en/contact?intent=sample&inquiry=ncr_forms'
         },
         {
           id: 'printed',
           title: 'Printed NCR Forms',
           shortDesc: 'Custom printed NCR forms for branding and official documentation.',
           bullets: ['Custom layouts and numbering', 'Suitable for accounting and logistics', 'Stable print registration'],
-          cta: 'Request Info',
-          ctaLink: '/en/contact'
+          cta: 'Request Samples',
+          ctaLink: '/en/contact?intent=sample&inquiry=ncr_forms'
         },
         {
           id: 'continuous',
           title: 'Continuous NCR Forms',
           shortDesc: 'Tractor-feed NCR forms for dot matrix and legacy printing systems.',
           bullets: ['Side perforation for continuous feeding', 'Compatible with dot matrix printers', 'Widely used in government and project systems'],
-          cta: 'Request Info',
-          ctaLink: '/en/contact'
+          cta: 'Request Samples',
+          ctaLink: '/en/contact?intent=sample&inquiry=ncr_forms'
         }
       ]
     },
@@ -110,10 +110,10 @@ export const content: Record<Lang, NCRFormsContent> = {
       ]
     },
     ctaBlock: {
-      headline: 'Looking for reliable NCR forms for your project?',
-      subtext: 'Contact our team for specifications, samples, and tender support.',
-      button: 'Request Tender Pack',
-      buttonLink: '/en/request-tender-pack'
+      headline: 'Need pricing or samples for NCR forms?',
+      subtext: 'Tell us the ply count, layout, numbering requirement, and buying scenario. We support repeat supply and institutional procurement.',
+      button: 'Request a Quote',
+      buttonLink: '/en/contact?intent=quote&inquiry=ncr_forms'
     },
     seo: {
       title: 'NCR Forms Manufacturer | Carbonless Forms for Business & Government | Zhixin',

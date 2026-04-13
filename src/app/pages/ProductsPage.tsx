@@ -42,6 +42,14 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ lang = 'en' }) => {
     <PageHero
       title={t.hero.h1}
       description={t.hero.subheading ? `${t.hero.subheading} ${t.hero.intro}` : t.hero.intro}
+      primaryCta={{
+        label: lang === 'zh' ? '索取报价' : lang === 'ru' ? 'Запросить расчёт' : 'Request Quote',
+        href: `/${lang}/contact?intent=quote`,
+      }}
+      secondaryCta={{
+        label: lang === 'zh' ? '申请样品' : lang === 'ru' ? 'Запросить образцы' : 'Request Samples',
+        href: `/${lang}/contact?intent=sample`,
+      }}
       image={{ src: pageAssets.hero.src, alt: pageAssets.hero.alt }}
       overlay={pageAssets.hero.overlay}
       placeholderKey="products_hero_banner"
@@ -134,7 +142,14 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ lang = 'en' }) => {
         </section>
 
         {/* 07: CTA Block */}
-        <ProductPageCta lang={lang} />
+        <ProductPageCta
+          lang={lang}
+          headline={t.ctaBlock.headline}
+          subtext={t.ctaBlock.subtext}
+          primaryButton={t.ctaBlock.button}
+          primaryLink={t.ctaBlock.buttonLink}
+          secondaryLink={`/${lang}/contact?intent=sample`}
+        />
       </PageShell>
     </>
   );

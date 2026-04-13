@@ -215,7 +215,7 @@ export function injectCanonicalAndHreflang(): void {
   }
 
   // Log for debugging (only in development)
-  if (process.env.NODE_ENV === "development") {
+  if (import.meta.env.DEV) {
     console.log("✅ SEO Tags Injected:");
     console.log(`   Canonical: ${canonical}`);
     console.log(`   Hreflangs: ${existingLangs.join(", ")} + x-default`);

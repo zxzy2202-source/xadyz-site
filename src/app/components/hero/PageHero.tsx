@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
-import * as HelmetAsync from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { supabasePublic } from '@/app/lib/supabasePublicClient';
+import { hasSupabaseConfig } from '@/lib/supabase/info';
 
 export interface PageHeroProps {
   eyebrow?: string;
@@ -46,7 +47,7 @@ export function PageHero({
 
   // 从 Supabase 读取动态图片
   React.useEffect(() => {
-    if (!placeholderKey) return;
+    if (!placeholderKey || !hasSupabaseConfig) return;
 
     let cancelled = false;
     async function fetchImage() {
@@ -95,9 +96,9 @@ export function PageHero({
     <section className={`pageHero ${overlayClass} ${sizeClass} ${alignClass}`}>
       {/* 预加载首屏 Banner，减少白屏时间 */}
       {image?.src && (
-        <HelmetAsync.Helmet>
+        <Helmet>
           <link rel="preload" href={image.src} as="image" />
-        </HelmetAsync.Helmet>
+        </Helmet>
       )}
       {/* 背景层：始终渲染。无图时显示占位色，有图时先占位色再淡入图片 */}
       <div
