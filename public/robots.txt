@@ -1,0 +1,37 @@
+# Zhixin Paper B2B Website - Robots.txt
+# Domain: xadyz.com
+# Optimized for Yandex and Google
+
+# ── Default: allow all crawlers ──────────────────────────────────────────────
+User-agent: *
+Allow: /
+
+# Block admin area
+Disallow: /admin/
+
+# Block API and tracking parameters
+Disallow: /api/
+
+# Sitemap locations
+Sitemap: https://xadyz.com/sitemap.xml
+Sitemap: https://xadyz.com/sitemap-en.xml
+Sitemap: https://xadyz.com/sitemap-ru.xml
+Sitemap: https://xadyz.com/sitemap-zh.xml
+
+# ── Yandex (primary CIS market) ──────────────────────────────────────────────
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+# ── Google ───────────────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+# ── Bing ─────────────────────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1

@@ -1,0 +1,128 @@
+/**
+ * B2B Hero 响应式高度方案
+ * Desktop: clamp(560px, 92vh, 760px)
+ * Laptop:  clamp(520px, 88vh, 680px)
+ * Tablet:  clamp(480px, 80vh, 620px)
+ * Mobile:  clamp(560px, 92vh, 720px)
+ */
+
+@layer components {
+  .hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: clamp(560px, 92vh, 760px);
+  }
+
+  @media (max-width: 1279px) {
+    .hero-section {
+      height: clamp(520px, 88vh, 680px);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .hero-section {
+      height: clamp(480px, 80vh, 620px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .hero-section {
+      height: clamp(560px, 92vh, 720px);
+    }
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.03);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.58) 0%,
+      rgba(0, 0, 0, 0.25) 55%,
+      rgba(0, 0, 0, 0.08) 100%
+    );
+  }
+
+  .hero-inner {
+    position: relative;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 72px clamp(24px, 5vw, 48px) 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .hero-inner-left {
+    align-items: flex-start;
+    text-align: left;
+    gap: 14px;
+    margin-left: clamp(24px, 5vw, 48px);
+    margin-right: auto;
+  }
+
+  /* B2B Hero 排版规范 */
+  .hero-eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.78);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  .hero-title {
+    font-size: clamp(38px, 4.4vw, 56px);
+    line-height: 1.15;
+    font-weight: 650;
+    color: #fff;
+    max-width: 22ch;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  @media (max-width: 767px) {
+    .hero-title {
+      font-size: 34px;
+      line-height: 1.18;
+      max-width: 100%;
+    }
+  }
+
+  .hero-desc {
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 46ch;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 14px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+  }
+
+  .hero-cta a,
+  .hero-cta button {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .hero-typography {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+}

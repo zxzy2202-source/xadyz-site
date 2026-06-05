@@ -1,0 +1,27 @@
+# 环境变量（包含敏感密钥，绝不提交）
+.env
+.env.local
+.env.*.local
+apps/blog/.env
+apps/blog/.env.local
+apps/blog/.env.*.local
+
+# 依赖目录
+node_modules/
+apps/blog/node_modules/
+
+# 构建产物
+dist/
+build/
+apps/blog/.next/
+apps/blog/out/
+
+# 编辑器 / 系统文件
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+npm-debug.log*
+
+# TypeScript 缓存
+*.tsbuildinfo
