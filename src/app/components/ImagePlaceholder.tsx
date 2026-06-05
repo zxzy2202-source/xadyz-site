@@ -115,7 +115,7 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
           setImageUrl(data.file_url);
         }
       } catch (err: any) {
-        console.error('[ImagePlaceholder] 异常:', err?.message || err);
+        // Silent fail
       } finally {
         if (!cancelled) setIsLoading(false);
       }
@@ -239,3 +239,6 @@ mage"
  *   aspectRatio="16:9"
  * />
  */
+* />
+  */
+
