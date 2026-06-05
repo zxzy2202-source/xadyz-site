@@ -132,8 +132,8 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
       <div
         className={`
           relative w-full 
-          ${aspectRatioClasses[aspectRatio]}
-          ${className}
+          \${aspectRatioClasses[aspectRatio]}
+          \${className}
         `}
       >
         <img
@@ -152,8 +152,8 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
       bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100
       border-2 border-dashed border-gray-300
       flex items-center justify-center
-      ${aspectRatioClasses[aspectRatio]}
-      ${className}
+      \${aspectRatioClasses[aspectRatio]}
+      \${className}
     `}>
       {/* Warning Icon (Top Right) */}
       <div className="absolute top-4 right-4 bg-white/90 px-3 py-1.5 rounded-lg shadow-sm border border-gray-200">
@@ -165,7 +165,7 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
       {/* Center Content */}
       <div className="text-center px-6 py-8">
         {/* Icon */}
-        <div className={`mb-4 mx-auto w-${iconSizes[size] / 4} h-${iconSizes[size] / 4} 
+        <div className={`mb-4 mx-auto w-\${iconSizes[size] / 4} h-\${iconSizes[size] / 4} 
           bg-white border-4 border-gray-300 rounded-2xl 
           flex items-center justify-center shadow-sm`}
         >
@@ -173,23 +173,23 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
         </div>
         
         {/* Label */}
-        <p className={`text-gray-600 font-bold uppercase tracking-wider mb-2 ${textSizes[size]}`}>
+        <p className={`text-gray-600 font-bold uppercase tracking-wider mb-2 \${textSizes[size]}`}>
           {labels[type]}
         </p>
         
         {/* Description */}
-        <p className={`text-gray-500 mb-3 ${size === 'sm' ? 'text-[10px]' : 'text-xs'}`}>
+        <p className={`text-gray-500 mb-3 \${size === 'sm' ? 'text-[10px]' : 'text-xs'}`}>
           {description || descriptions[type]}
         </p>
         
         {/* Aspect Ratio Info */}
-        <p className={`text-gray-400 ${size === 'sm' ? 'text-[9px]' : 'text-[10px]'} font-mono`}>
+        <p className={`text-gray-400 \${size === 'sm' ? 'text-[9px]' : 'text-[10px]'} font-mono`}>
           Aspect Ratio: {aspectRatio}
         </p>
         
         {/* Manual Notice */}
         <div className="mt-4 pt-4 border-t border-gray-200 max-w-xs mx-auto">
-          <p className={`text-gray-400 italic ${size === 'sm' ? 'text-[9px]' : 'text-[10px]'}`}>
+          <p className={`text-gray-400 italic \${size === 'sm' ? 'text-[9px]' : 'text-[10px]'}`}>
             This image will be replaced manually with actual factory/product photography
           </p>
         </div>
@@ -235,10 +235,3 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
  *   aspectRatio="16:9"
  * />
  */
-mage"
- *   aspectRatio="16:9"
- * />
- */
-* />
-  */
-
