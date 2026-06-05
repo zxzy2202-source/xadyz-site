@@ -19,10 +19,13 @@ import {
   FileText,
   ChevronRight,
   ArrowRight,
-  AlertCircle
+  AlertCircle,
+  ClipboardList,
+  BarChart2,
+  Layers,
+  DollarSign
 } from 'lucide-react';
 import { CONTACT } from '@/app/lib/contactConfig';
-import { supabasePublic } from '@/app/lib/supabasePublicClient';
 import { PRODUCT_KEYS, PRODUCT_INTEREST_OPTIONS, getProductLabel } from '@/app/lib/leadConfig';
 import { PLACEHOLDERS } from '@/app/lib/assets';
 import type { PageAssetsConfig } from '@/app/lib/assets';
