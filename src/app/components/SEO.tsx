@@ -144,7 +144,7 @@ export const SEO: React.FC<SEOProps> = ({
         </script>
       )}
 
-      {/* Yandex.Metrika counter — Optimized for Russian Market */}
+      {/* Yandex.Metrika counter — Disabled temporarily to debug blank page
       <script type="text/javascript">
         {`
           (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -166,6 +166,7 @@ export const SEO: React.FC<SEOProps> = ({
           <img src="https://mc.yandex.ru/watch/99887766" style={{ position:'absolute', left:'-9999px' }} alt="" />
         </div>
       </noscript>
+      */}
     </Helmet>
   );
 };
